@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'quests/index'
+
   devise_for :users
   root to: 'pages#home'
   # resources :guild, only: :index do
