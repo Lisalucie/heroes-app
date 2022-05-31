@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_05_30_142409) do
 
   create_table "guild_choices", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "guild_id", null: false
+    t.bigint "qu", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["guild_id"], name: "index_guild_choices_on_guild_id"
