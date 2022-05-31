@@ -3,11 +3,17 @@
 
 <% if current_user.guild_choices.present? %>
   <div class="questContainer" style="background-color: #EBAD1C" >
+
     <div class="col-xs-12 col-sm-6" style="background-color: #009900">
+
       <% @quests.each do |quest| %>
+
         <div class="questCard" style="background-color: #2B58A9">
-          <h1></h2>
-          <a href="#" class="btn">🙈 <% quest %></a>
+          <%= link_to "toshow", quest_path(quest) %>
+          <p><%= "#{quest.level} #{quest.title} /#{quest.occurences}"%></p>
+
+
+
         </div>
 
       <% end %>
