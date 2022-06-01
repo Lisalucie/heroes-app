@@ -1,6 +1,29 @@
-
 .container {
-  width: 778px;
   margin: 49px auto;
+  text-align: justify;
+  font-size: 16px;
+}
+
+h5 {
+  font-family: $shiba-font;
   text-align: center;
+}
+
+.btn-start {
+	background: #FFE6C3;
+	box-sizing: border-box;
+	color: black;
+	cursor: pointer;
+  text-align: center;
+	font-size: 20px;
+	margin: 2px;
+	padding: 5px;
+	text-transform: uppercase;
+  box-shadow: $btn-box-shadow;
+  border: 3px solid $orange;
+  font-family: $headers-font;
+
+	&:hover {
+		background: #ed6047;
+	}
 }
