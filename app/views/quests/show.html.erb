@@ -1,2 +1,16 @@
 <h1>Quests#show</h1>
-<p>it's amazing</p>
+
+
+<div class="container">
+  <div class="col-12 col-lg-6" style="background-color: #009900">
+    <div class="card" style="background-color: #EBAD1C" >
+      <p><%= "Level #{@quest.level}"%></p>
+      <h5><%= "#{@quest.title}"%></h5>
+      <p><%= "#{@quest.content}"%></p>
+      <p><%= "#{@quest.occurences}"%></p>
+      <p><%= "#{@quest.tips}"%></p>
+      <br>
+      <p><%= link_to "validate", quests_path %></p>
+    </div>
+  </div>
+</div>

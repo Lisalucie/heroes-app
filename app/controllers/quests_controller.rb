@@ -8,10 +8,10 @@ class QuestsController < ApplicationController
       @guilds = Guild.all
     end
     # , guild_id: current_user.guild_id
-
   end
 
   def show
     @quest = Quest.find(params[:id])
+
   end
 end
