@@ -10,6 +10,6 @@ class GuildChoicesController < ApplicationController
   private
 
   def guild_choice_params
-    params.require(:guild_choice).permit(:guild_id, :user_id)
+    params.require(:guild_choice).permit(:guild_id, :user_id, :icon_id)
   end
 end
