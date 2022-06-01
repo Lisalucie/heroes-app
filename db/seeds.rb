@@ -17,7 +17,14 @@ marty = User.create(nickname:"marty", password: "azerty", email: "marty@zoo.com"
 puts "Creating guilds..."
 
 adventurer = Guild.create!(name: "Adventurer", description: "the guild of the brave")
+
+adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654078662/Heroes%20app/Icons/wizard_gcrlju.png')
+adventurer.icon.attach(io: adventurericon, filename: 'wizardicon.png', content_type: 'image/png')
+
 mage = Guild.create(name: "Mage", description: "the guild of the curious")
+
+wizardicon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654078662/Heroes%20app/Icons/wizard_gcrlju.png')
+mage.icon.attach(io: wizardicon, filename: 'wizardicon.png', content_type: 'image/png')
 
 puts "Creating quests..."
 
@@ -39,3 +46,5 @@ UserQuest.create(status: "pending", user_occurences: 1, quest: adventurer_level_
 UserQuest.create(status: "pending", user_occurences: 1, quest: adventurer_level_1_quest_3, user: gerard)
 
 puts "Finished!"
+
+file = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654078662/Heroes%20app/Icons/wizard_gcrlju.png')
