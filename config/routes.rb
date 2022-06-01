@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'user_quests/create'
+  get 'user_quests/update'
   get 'guild_choices/create'
   get 'users/update'
   devise_for :users
