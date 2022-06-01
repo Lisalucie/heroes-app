@@ -18,8 +18,8 @@ puts "Creating guilds..."
 
 adventurer = Guild.create!(name: "Adventurer", description: "the guild of the brave")
 
-adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654078662/Heroes%20app/Icons/wizard_gcrlju.png')
-adventurer.icon.attach(io: adventurericon, filename: 'wizardicon.png', content_type: 'image/png')
+adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654089596/Heroes%20app/Icons/tiodwiyanto210500649_atmstm.jpg')
+adventurer.icon.attach(io: adventurericon, filename: 'adventurericon.jpg', content_type: 'image/jpg')
 
 mage = Guild.create(name: "Mage", description: "the guild of the curious")
 
