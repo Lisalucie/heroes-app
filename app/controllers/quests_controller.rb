@@ -14,6 +14,4 @@ class QuestsController < ApplicationController
     @quest = Quest.find(params[:id])
     @user_quest = UserQuest.new
   end
-
-
 end
