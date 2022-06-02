@@ -7,10 +7,10 @@
       <div class="col-12 col-lg-6" style="background-color: #009900">
 
         <% @quests.each do |quest| %>
-            <div class="questCard" style="background-color: #2B58A9">
-              <%= link_to "toshow", quest_path(quest) %>
-              <p><%= "#{quest.level} #{quest.title} /#{quest.occurences}"%></p>
-            </div>
+          <div class="questCard" style="background-color: #2B58A9">
+            <%= link_to "toshow", quest_path(quest) %>
+            <p><%= "#{quest.level} #{quest.title} /#{quest.occurences}"%></p>
+          </div>
         <% end %>
       </div>
     </div>
@@ -19,11 +19,11 @@
   <div class="swiper">
     <div class="swiper-wrapper">
       <% @guilds.each do |guild| %>
-      <div class="swiper-slide">
-        <%= cl_image_tag guild.icon.key, height: 300, width: 400, crop: :fill %>
-        <h1><%= guild.name %></h1>
-        <%= render "form", guild: guild, guild_choice: @guild_choice %>
-      </div>
+        <div class="swiper-slide">
+          <%= cl_image_tag guild.icon.key, height: 300, width: 400, crop: :fill %>
+          <h1><%= guild.name %></h1>
+          <%= render "form", guild: guild, guild_choice: @guild_choice %>
+        </div>
       <% end %>
     </div>
     <div class="swiper-button-prev">Précédent</div>
