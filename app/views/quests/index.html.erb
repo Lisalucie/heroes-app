@@ -1,5 +1,4 @@
 <%= render 'shared/shiba' %>
-<h1> Level :  <%=current_user.level %> </h1>
 <p>it's amazing</p>
 
 <% if current_user.guild_choices.present? %>
@@ -12,12 +11,14 @@
             <div class="questCard" style="background-color: #2B58A9">
               <%= link_to "toshow", quest_path(quest) %>
               <p><%= " Quest lvl :#{quest.level} - #{quest.title} - ?/#{quest.occurences}"%></p>
-              <div class="container-bar">
-                <div class="progress" data-progress-bar-target="progressBar">
-                  <div class="progress-bar">
+
+                <div class="container-bar">
+                  <div class="progress" data-progress-bar-target="progressBar">
+                    <div class="progress-bar">
+                    </div>
                   </div>
                 </div>
-              </div>
+             
             </div>
         <% end %>
       </div>
