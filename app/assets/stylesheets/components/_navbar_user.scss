@@ -1,12 +1,45 @@
 .navbar-user {
-  justify-content: space-between;
   background: $light-blue;
+  flex-grow: 1;
 }
 
-.navbar-user .navbar-collapse {
-  flex-grow: 0;
+
+.navbar-user .navbar-avatar img {
+  width: 85px;
 }
 
-.navbar-user .navbar-brand img {
-  width: 40px;
+.behind-avatar {
+	background: #FFE6C3;
+	box-sizing: border-box;
+  box-shadow: $btn-box-shadow;
+  border: 3px solid $orange;
+  display: grid;
+  place-content: center;
+}
+
+.user-infos-navbar {
+  font-family: $shiba-font;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  line-height: 15px;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+    h2, p {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: $shiba-font;
+      font-weight: bold;
+      color: $dark-blue;
+      font-size: 30px;
+      line-height: 25px;
+    }
+
+    .level {
+      color: $orange;
+    }
 }

@@ -1,10 +1,19 @@
 .container {
-  margin: 49px auto;
+  margin: 30px auto;
   text-align: justify;
   font-size: 16px;
 }
 
-h5 {
+h5, h1 {
   font-family: $shiba-font;
   text-align: center;
+}
+
+
+.card-quest {
+  background-color: $light-blue;
+  border: 15px solid $yellow;
+  text-align: center;
+  height: 470px;
+  width: 330px;
 }
