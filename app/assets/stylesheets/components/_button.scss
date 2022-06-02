@@ -18,6 +18,8 @@
   box-shadow: $btn-box-shadow;
   border: 3px solid $orange;
   font-family: $headers-font;
+  min-width: 35%;
+  text-decoration: none;
 
 	&:hover {
 		padding: 8px;
