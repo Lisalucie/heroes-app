@@ -1,22 +1,18 @@
-.alert {
-  position: fixed;
-  bottom: 6px;
-  right: 6px;
-  left: 6px;
-  z-index: 1000;
+.shiba {
   background-color: $light-blue;
+  color: black;
   font-family: $shiba-font;
   line-height: 20px;
-  color: black;
   border-radius: 5px;
+	width: 90%;
+  height: 15%;
+	display: block;
+  padding: 5px;
+  margin: 10px;
+  box-sizing: unset;
 }
 
-
-.shiba-photo {
-  width: 50px;
-}
-
- .shiba-name-tag {
+.shiba .shiba-name-tag {
   background: $yellow;
 	width: 40%;
 	display: block;
@@ -27,9 +23,19 @@
   margin-left: 10px;
 
 }
-
-.shiba-speech {
+.shiba .shiba-speech {
   margin-left: 10px;
   margin-right: 10px;
-  justify-content: space-between;
+}
+
+.shiba img {
+ width: 20%;
+ border-radius: 5px;
+
+}
+
+.fa-caret-down {
+  color: $yellow;
+  display: flex;
+  justify-content: flex-end;
 }

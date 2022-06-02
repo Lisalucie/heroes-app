@@ -1,0 +1,24 @@
+<% if @quest.nil? %>
+  <div class="shiba"  data-controller="typed-js">
+    <p class="shiba-name-tag">Shiba</p>
+
+    <div class="d-flex justify-content-around align-items-center w-100 h-100">
+      <p class="shiba-speech"></p>
+      <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png"%>
+    </div>
+
+    <i class="fas fa-caret-down"></i>
+  </div>
+<% else %>
+  <div class="shiba"  data-controller="typed-js" data-typed-js-tips-value="<%= @quest.tips %>">
+    <p class="shiba-name-tag">Shiba</p>
+
+    <div class="d-flex justify-content-around align-items-center w-100 h-100">
+      <p class="shiba-speech"></p>
+      <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png"%>
+    </div>
+
+    <i class="fas fa-caret-down "></i>
+  </div>
+
+<% end %>

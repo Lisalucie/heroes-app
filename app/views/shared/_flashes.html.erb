@@ -1,13 +1,22 @@
 <% if notice %>
   <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
-    <%= notice %>
+    <p class="shiba-name-tag"> Shiba</p>
+    <div class="shiba-speech d-flex">
+      <%= notice%>
+      <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png", class: "shiba-photo"%>
+    </div>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
     </button>
   </div>
 <% end %>
+
 <% if alert %>
   <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
-    <%= alert %>
+    <p class="shiba-name-tag"> Shiba</p>
+    <div class="shiba-speech d-flex">
+      <%= alert %>
+      <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png", class: "shiba-photo"%>
+    </div>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
     </button>
   </div>
