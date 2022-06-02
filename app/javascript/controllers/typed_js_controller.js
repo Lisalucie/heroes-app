@@ -12,9 +12,10 @@ export default class extends Controller {
     console.log(this.tipsValue)
       if (window.location.pathname == "/quests") {
         var questsString = {
-          strings: ['I am your guide ! ', 'My name is Shiba and I will help you during your journey !', 'and Charlie is really really nice'],
+          strings: ['I am your guide ! ', 'My name is Shiba and I will help you during your journey !'],
           typeSpeed: 40,
-          showCursor: false
+          showCursor: false,
+          loop: true,
         };
         new Typed('.shiba-speech', questsString);
 
@@ -22,14 +23,16 @@ export default class extends Controller {
         var questString = {
           strings: [this.tipsValue],
           typeSpeed: 40,
-          showCursor: false
+          showCursor: false,
+          loop: true,
         };
         new Typed('.shiba-speech', questString);
       } else {
         var questString = {
-          strings: ["Trust yourself bro or sis'"],
+          strings: ["Trust yourself", "You can become anything you want"],
           typeSpeed: 40,
-          showCursor: false
+          showCursor: false,
+          loop: true,
         };
         new Typed('.shiba-speech', questString);
       }
