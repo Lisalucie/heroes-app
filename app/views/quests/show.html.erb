@@ -2,20 +2,19 @@
 
 
 <div class="container">
-  <div class="col-12 col-lg-6" style="background-color: #009900">
-    <div class="card" style="background-color: #EBAD1C">
+  <div class="col-12 col-md-6">
+    <div class="card card-quest">
       <p><%= "Level #{@quest.level}"%></p>
-      <h5><%= "#{@quest.title}"%></h5>
+      <h1><%= "#{@quest.title}"%></h1>
       <p><%= "#{@quest.content}"%></p>
       <p><%= "#{@quest.occurences}"%></p>
       <p><%= "#{@quest.tips}"%></p>
       <br>
-        <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
-
     </div>
   </div>
+    <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
 </div>
 
-<div>
+<%# <div>
   <h2 class= "btn-start">START</h2>
-</div>
+</div> %>
