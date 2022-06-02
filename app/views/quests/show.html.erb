@@ -10,7 +10,8 @@
       <p><%= "#{@quest.occurences}"%></p>
       <p><%= "#{@quest.tips}"%></p>
       <br>
-      <p><%= link_to "validate", quests_path %></p>
+        <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
+
     </div>
   </div>
 </div>

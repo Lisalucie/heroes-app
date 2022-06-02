@@ -1,4 +1,4 @@
-<h1>Quests#index</h1>
+<h1> Level :  <%=current_user.level %> </h1>
 <p>it's amazing</p>
 
 <% if current_user.guild_choices.present? %>
@@ -7,10 +7,11 @@
       <div class="col-12 col-lg-6" style="background-color: #009900">
 
         <% @quests.each do |quest| %>
-          <div class="questCard" style="background-color: #2B58A9">
-            <%= link_to "toshow", quest_path(quest) %>
-            <p><%= "#{quest.level} #{quest.title} /#{quest.occurences}"%></p>
-          </div>
+        <%# quest.user_quests.any? && user_quest.status == validated %>
+            <div class="questCard" style="background-color: #2B58A9">
+              <%= link_to "toshow", quest_path(quest) %>
+              <p><%= " Quest lvl :#{quest.level} - #{quest.title} - ?/#{quest.occurences}"%></p>
+            </div>
         <% end %>
       </div>
     </div>

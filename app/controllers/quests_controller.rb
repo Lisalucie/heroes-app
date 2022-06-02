@@ -12,6 +12,8 @@ class QuestsController < ApplicationController
 
   def show
     @quest = Quest.find(params[:id])
-
+    @user_quest = UserQuest.new
   end
+
+
 end
