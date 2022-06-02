@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'guild_choices/create'
-  get 'users/update'
+
   devise_for :users
   root to: 'pages#home'
   # resources :guild, only: :index do

@@ -1,0 +1,20 @@
+<div class="navbar-bottom">
+  <div class="d-flex justify-content-around align-items-center w-100 h-100">
+    <%= link_to "/", class: "navbar-icon" do %>
+      <i class="fas fa-home icons-bottom" ></i>
+    <% end %>
+
+    <%= link_to quests_path, class: "navbar-icon" do %>
+      <i class="fas fa-trophy icons-bottom"></i>
+    <% end %>
+
+    <%= link_to quests_path, class: "navbar-icon" do %>
+      <i class="fas fa-book icons-bottom" ></i>
+    <% end %>
+
+    <%= link_to destroy_user_session_path, method: :delete, class: "navbar-icon" do %>
+      <i class="fas fa-cog icons-bottom" ></i>
+    <% end %>
+  </div>
+</div>
+
