@@ -7,12 +7,12 @@ class UserQuestsController < ApplicationController
     if @user_quest.save
       @user_quest.validated!
       update_level
-      redirect_to quests_path, notice: "Quest successfully validated"
+
     end
   end
 
   def update
-
+    # mettre à jour les user_occurences via le update
   end
 
   private
