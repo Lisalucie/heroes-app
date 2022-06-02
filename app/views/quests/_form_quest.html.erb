@@ -1,5 +1,8 @@
 <%= simple_form_for user_quest, url: quest_user_quests_path(quest), method: :post do |f| %>
-    <%= hidden_field_tag "user_quest[user_id]", current_user.id %>
-    <%= hidden_field_tag "user_quest[quest_id]", quest.id %>
-    <%= f.submit  "FINISHED", class: "btn btn-primary" %>
+<%= hidden_field_tag "user_quest[user_id]", current_user.id %>
+<%= hidden_field_tag "user_quest[quest_id]", quest.id %>
+<div class="d-flex justify-content-center" >
+<%= link_to "MENU", quests_path, class: "btn-start"  %>
+<%= f.submit  "CLEAR", class: "btn-start", data: { "action": "click->progress-bar#updateBar" } %>
+</div>
 <% end %>
