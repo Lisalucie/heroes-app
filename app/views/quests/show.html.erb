@@ -8,8 +8,7 @@
       <h1><%= "#{@quest.title}"%></h1>
       <p><%= "#{@quest.content}"%></p>
       <p><%= "#{@quest.occurences}"%></p>
-      <p><%= "#{@quest.tips}"%></p>
-        <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
+
       <div class="container-bar">
         <div class="progress" data-progress-bar-target="progressBar">
           <div class="progress-bar">
