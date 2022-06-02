@@ -20,11 +20,11 @@
   <div class="swiper">
     <div class="swiper-wrapper">
       <% @guilds.each do |guild| %>
-      <div class="swiper-slide">
-        <%= cl_image_tag guild.icon.key, height: 300, width: 400, crop: :fill %>
-        <h1><%= guild.name %></h1>
-        <%= render "form", guild: guild, guild_choice: @guild_choice %>
-      </div>
+        <div class="swiper-slide">
+          <%= cl_image_tag guild.icon.key, height: 300, width: 400, crop: :fill %>
+          <h1><%= guild.name %></h1>
+          <%= render "form", guild: guild, guild_choice: @guild_choice %>
+        </div>
       <% end %>
     </div>
     <div class="swiper-button-prev">Précédent</div>

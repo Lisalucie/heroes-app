@@ -1,0 +1,12 @@
+.navbar-user {
+  justify-content: space-between;
+  background: $light-blue;
+}
+
+.navbar-user .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-user .navbar-brand img {
+  width: 40px;
+}
