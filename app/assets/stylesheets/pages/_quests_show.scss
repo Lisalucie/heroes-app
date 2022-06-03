@@ -1,13 +1,8 @@
 .container-user-quest {
-  margin: 30px auto;
-  text-align: justify;
-  font-size: 16px;
-  padding: 30px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 5em;
   align-items: center;
-  margin: 10px;
-  padding-bottom: 100px;
 }
 
 h5, h1 {
@@ -20,8 +15,6 @@ h5, h1 {
   background-color: $light-blue;
   border: 15px solid $yellow;
   text-align: center;
-  height: 400px;
-  width: 330px;
   margin: 10px;
 }
 

@@ -2,7 +2,8 @@
 
 
 <%= render 'shared/shiba' %>
-<div class="container" data-controller="progress-bar">
+
+<div class="container-user-quest" data-controller="progress-bar">
   <div class="col-12 col-md-6">
     <div class="card card-quest">
       <p><%= "Level #{@quest.level}"%></p>
@@ -10,8 +11,8 @@
       <p><%= "#{@quest.content}"%></p>
       <p><%= "#{@quest.occurences}"%></p>
       <p><%= "#{@quest.tips}"%></p>
-      <div class="container-bar">
-        <div class="progress" data-progress-bar-target="progressBar">
+      <div class="progress-bar-placement">
+        <div class="progress">
           <div class="progress-bar">
           </div>
         </div>
