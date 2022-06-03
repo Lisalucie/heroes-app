@@ -1,0 +1,23 @@
+.quest-container {
+  overflow: auto;
+  padding-bottom: 5rem;
+}
+
+.quest-card {
+  background-color: $light-blue;
+  width: 90%;
+  margin:10px;
+  border-radius: 5px;
+  max-height: fit-content;
+  font-family: $shiba-font;
+}
+
+
+.quest-card-validated {
+  background-color: $yellow;
+  width: 90%;
+  margin:10px;
+  border-radius: 5px;
+  max-height: fit-content;
+  font-family: $shiba-font;
+}

@@ -2,31 +2,9 @@
 <p>it's amazing</p>
 
 <% if current_user.guild_choices.present? %>
-  <div class="questContainer" style="background-color: #EBAD1C" >
-    <div class="row">
-      <div class="col-12 col-lg-6" style="background-color: #009900">
 
-        <% @quests.each do |quest| %>
-        <%# quest.user_quests.any? && user_quest.status == validated %>
-            <div class="questCard" style="background-color: #2B58A9">
-              <%= link_to "toshow", quest_path(quest) %>
-              <p><%= " Quest lvl :#{quest.level} - #{quest.title} - ?/#{quest.occurences}"%></p>
-                  <div class="progress" data-progress-bar-target="progressBar">
-                    <div class="progress-bar">
-                    </div>
-                  </div>
-<<<<<<< HEAD
-                </div>
-                <%= render 'shared/quests_cards' %>
-=======
+  <%= render 'shared/quests_cards' %>
 
-
->>>>>>> 3b0c4accb53e3ac3b83555d92a3b46701d8a1f33
-            </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
 <% else %>
   <div class="swiper">
     <div class="swiper-wrapper">

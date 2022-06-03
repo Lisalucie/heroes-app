@@ -1,0 +1,30 @@
+<div class="quest-container" >
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <% @quests.each do |quest| %>
+        <% if quest.user_quests.any? %>
+          <div class="quest-card">
+            <p><%= "#{quest.title} - 1/#{quest.occurences}"%></p>
+            <div class="progress-bar-placement">
+              <div class="progress" data-progress-bar-target="progressBar">
+                <div class="progress-bar">
+                </div>
+              </div>
+            </div>
+            <%= link_to "toshow", quest_path(quest) %>
+          </div>
+        <% else %>
+          <div class="quest-card-validated">
+            <p><%= "#{quest.title} - 1/#{quest.occurences}"%></p>
+            <div class="progress-bar-placement">
+              <div class=" progress-validated">
+                <div class="progress-bar">
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
