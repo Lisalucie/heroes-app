@@ -9,7 +9,6 @@
       <p><%= "#{@quest.content}"%></p>
       <p><%= "#{@quest.occurences}"%></p>
       <p><%= "#{@quest.tips}"%></p>
-        <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
       <div class="container-bar">
         <div class="progress" data-progress-bar-target="progressBar">
           <div class="progress-bar">
@@ -17,6 +16,6 @@
         </div>
       </div>
     </div>
-  </div>
+  </div c>
     <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
 </div>
