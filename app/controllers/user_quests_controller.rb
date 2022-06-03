@@ -7,7 +7,6 @@ class UserQuestsController < ApplicationController
     if @user_quest.save
       @user_quest.validated!
       update_level
-
     end
   end
 
@@ -23,7 +22,7 @@ class UserQuestsController < ApplicationController
 
   def update_level
     number_of_quest_validated = current_user.user_quests.where(status: "validated").count # => 12
-    if number_of_quest_validated == 4 || number_of_quest_validated == 8 || number_of_quest_validated == 12
+    if number_of_quest_validated == 5 || number_of_quest_validated == 10 || number_of_quest_validated == 15
       current_user.level += 1
       current_user.save
     end
