@@ -19,12 +19,12 @@ puts "Creating guilds..."
 
 adventurer = Guild.create!(name: "Adventurer", description: "the guild of the brave")
 
-adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654089596/Heroes%20app/Icons/tiodwiyanto210500649_atmstm.jpg')
+adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167316/Heroes%20app/Icons/pxArt_2_ihrfi7.png')
 adventurer.icon.attach(io: adventurericon, filename: 'adventurericon.jpg', content_type: 'image/jpg')
 
 mage = Guild.create(name: "Mage", description: "the guild of the curious")
 
-wizardicon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654078662/Heroes%20app/Icons/wizard_gcrlju.png')
+wizardicon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167323/Heroes%20app/Icons/pxArt_wpthzz.png')
 mage.icon.attach(io: wizardicon, filename: 'wizardicon.png', content_type: 'image/png')
 
 puts "Creating quests..."

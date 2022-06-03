@@ -12,7 +12,16 @@
             <label for="<%= guild.name %>">
               <%= cl_image_tag guild.icon.key%>
               <h1><%= guild.name %></h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam non in enim veniam impedit magni maxime tempora fugiat quos.</p>
+              <p>The adventurer is self-confident and travels the world in search of challenges to improve himself.
+              Taking this path will answer these  problematics : </p>
+              <ul>
+              <li> Improve your self-confidence</li>
+              <li>Learn to love yourself and to feel good enough</li>
+              <li>Stop judging yourself</li>
+              <li>Get oustide your comfort zone</li>
+              <li>Learn to embrace instability and failure</li>
+              </ul>
+
             </label>
 
             <%= render "form", guild: guild, guild_choice: @guild_choice %>
