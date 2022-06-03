@@ -1,18 +1,26 @@
-<%= render 'shared/shiba' %>
-<p>it's amazing</p>
 
-<% if current_user.guild_choices.present? %>
-  <%= render 'shared/quests_cards' %>
-<% else %>
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <% @guilds.each do |guild| %>
-        <div class="swiper-slide">
-          <%= cl_image_tag guild.icon.key, height: 300, width: 400, crop: :fill %>
-          <h1><%= guild.name %></h1>
-          <%= render "form", guild: guild, guild_choice: @guild_choice %>
-        </div>
-      <% end %>
+<div class="guild-choice-container">
+  <%= render 'shared/shiba' %>
+  <p>it's amazing</p>
+
+  <% if current_user.guild_choices.present? %>
+    <%= render 'shared/quests_cards' %>
+  <% else %>
+    <div class="swiper guild-cards">
+      <div class="swiper-wrapper">
+        <% @guilds.each do |guild| %>
+          <div class="swiper-slide guild-card">
+            <input type="checkbox" class="guild-choice" id="<%= guild.name %>">
+            <label for="<%= guild.name %>">
+              <%= cl_image_tag guild.icon.key%>
+              <h1><%= guild.name %></h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam non in enim veniam impedit magni maxime tempora fugiat quos.</p>
+            </label>
+
+            <%= render "form", guild: guild, guild_choice: @guild_choice %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
