@@ -1,6 +1,17 @@
 .navbar-user {
   background: $light-blue;
   flex-grow: 1;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+}
+
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 
@@ -26,6 +37,7 @@
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
+
 
     h2, p {
       margin-bottom: 0;

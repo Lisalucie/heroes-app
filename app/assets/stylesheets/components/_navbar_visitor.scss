@@ -1,6 +1,8 @@
 .navbar-visitor {
   justify-content: space-between;
   background: $light-blue;
+  position: sticky;
+  top: 0px;
 }
 
 .navbar-visitor .navbar-collapse {
