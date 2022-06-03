@@ -3,7 +3,7 @@
     <div class="col-12 col-lg-6">
       <% @quests.each do |quest| %>
         <% user_quest = quest.user_quests %>
-        <% if quest.user_quests.any? %>
+        <% if quest.user_quests.where(user: current_user).any? %>
           <div class="quest-card-validated">
               <p><%= "#{quest.title} - 1/#{quest.occurences}"%></p>
               <div class="progress-bar-placement">
