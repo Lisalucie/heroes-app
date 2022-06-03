@@ -1,23 +1,23 @@
-<h1>Quest category</h1>
-
-
-<%= render 'shared/shiba' %>
+<h1>SOCIAL</h1>
 
 <div class="container-user-quest" data-controller="progress-bar">
   <div class="col-12 col-md-6">
     <div class="card card-quest">
-      <p><%= "Level #{@quest.level}"%></p>
-      <h1><%= "#{@quest.title}"%></h1>
-      <p><%= "#{@quest.content}"%></p>
-      <p><%= "#{@quest.occurences}"%></p>
-      <p><%= "#{@quest.tips}"%></p>
-      <div class="progress-bar-placement" data-progress-bar-target="progressBar">
-        <div class="progress">
-          <div class="progress-bar">
+      <div class="shiba">
+        <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png"%>
+      </div> 
+        <p><%= "Level #{@quest.level}"%></p>
+        <h1><%= "#{@quest.title}"%></h1>
+        <p><%= "#{@quest.content}"%></p>
+        <p><%= "#{@quest.occurences}"%></p>
+        <p><%= "#{@quest.tips}"%></p>
+        <div class="progress-bar-placement" data-progress-bar-target="progressBar">
+          <div class="progress">
+            <div class="progress-bar">
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
     <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
 </div>

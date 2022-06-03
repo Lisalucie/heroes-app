@@ -1,10 +1,18 @@
+
+
 <div class="navbar navbar-expand-sm navbar-light navbar-visitor">
   <div class="container-fluid">
     <%= link_to new_user_session_path, class: "navbar-brand" do %>
       <h1>Heroes</h1>
     <% end %>
-    <%= link_to new_user_session_path, class: "navbar-icon" do %>
-      <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png", class: "avatar-large"%>
+
+    <% if user_signed_in? %>
+      <%= link_to quests_path, class: "nav-icon" do %>
+        <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png", class: "avatar-large"%>
+      <% end %>
+    <% else%>
+      <%= link_to "LOG IN", new_user_session_path, class: "btn-start" %>
+
     <% end %>
     <%# FOR HOMEPAGE = REMPLACE SHIBA BY LOGIN BUTTON %>
     <%# <li class="nav-item">
