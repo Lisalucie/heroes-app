@@ -6,7 +6,6 @@ class GuildChoicesController < ApplicationController
     redirect_to quests_path
   end
 
-
   private
 
   def guild_choice_params
