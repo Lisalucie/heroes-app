@@ -1,11 +1,12 @@
 require "open-uri"
 
 puts "Cleaning database..."
-UserQuest.delete_all
+UserQuest.destroy_all
 Quest.destroy_all
-GuildChoice.delete_all
-Guild.delete_all
+GuildChoice.destroy_all
+Guild.destroy_all
 User.destroy_all
+
 
 puts "Creating users..."
 
@@ -65,9 +66,7 @@ GuildChoice.create(user: xavier, guild: mage)
 GuildChoice.create(user: marty, guild: adventurer)
 
 puts "Creating quest for guild"
-UserQuest.create(status: "pending", user_occurences: 1, quest: adventurer_level_1_quest_1, user: gerard)
-UserQuest.create(status: "pending", user_occurences: 1, quest: adventurer_level_1_quest_2, user: gerard)
-UserQuest.create(status: "pending", user_occurences: 1, quest: adventurer_level_1_quest_3, user: gerard)
+
 
 puts "Finished!"
 
