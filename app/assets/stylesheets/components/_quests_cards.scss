@@ -10,7 +10,8 @@
   max-height: fit-content;
   font-family: $shiba-font;
   p {
-    padding-left: 10px;
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
   }
 }
@@ -22,8 +23,10 @@
   border-radius: 5px;
   max-height: fit-content;
   font-family: $shiba-font;
+
   p {
-    padding-left: 10px;
+    display: flex;
+    justify-content: center;
     padding-top: 10px;
   }
 }

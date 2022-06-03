@@ -6,12 +6,12 @@
 }
 
 .progress {
+
   padding: 6px;
   width: 90%;
   margin-bottom: 8px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  background: white;
+  box-shadow: 0 1px 2px $blue;
 }
 
 .progress-striped .progress-bar {
@@ -31,7 +31,6 @@
 .progress-validated {
   padding: 6px;
   background:$orange;
-  border-radius: 6px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
   width: 90%;
   margin-bottom: 8px;
