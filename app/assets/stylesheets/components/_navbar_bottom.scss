@@ -1,8 +1,10 @@
 .navbar-bottom {
   background: $light-blue;
-  bottom: 0;
+  position: fixed;
   width: 100vw;
   height: 5rem;
+  margin-top: 5rem;
+  bottom: 0px;
 }
 
 .icons-bottom{
