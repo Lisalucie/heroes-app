@@ -1,0 +1,31 @@
+.guild-choice-container {
+  margin-bottom: 5rem;
+
+  .guild-card {
+    padding: 1rem;
+    width: 100vw;
+
+    .guild-choice {
+      position: absolute;
+      transform: scale(0);
+    }
+    .guild-choice + label {
+      background-color: $light-blue;
+      width: 100%;
+      padding: 2rem;
+      border: 20px solid $dark-blue;
+      cursor: pointer;
+
+      img {
+        width: 10rem;
+        margin: auto;
+        display: flex;
+      }
+    }
+
+    .guild-choice:checked + label{
+      background-color: $yellow;
+      border-color: $orange;
+    }
+  }
+}
