@@ -56,3 +56,18 @@
       color: $orange;
     }
 }
+
+
+
+.progress-bar-user {
+  display: flex;
+  justify-content: left;
+}
+
+.navbar-user .progress {
+  padding: 6px;
+  width: 90%;
+  margin-bottom: 8px;
+  background: white;
+  box-shadow: 0 1px 2px $blue;
+}
