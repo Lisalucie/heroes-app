@@ -1,11 +1,11 @@
 <h1>Sign up</h1>
 
   <div class="mx-auto">
-    <div class="opacite mx-auto p-5 mb-4 bg-white rounded">
+    <div class="opacite mx-auto p-5 mt-4">
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
 
-        <div class="form-inputs">
+        <div class="form-inputs backgroundinput">
           <h1><%= f.input :nickname,
                     required: true,
                     input_html: { autocomplete: "nickname" } %></h1>

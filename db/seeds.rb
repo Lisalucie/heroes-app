@@ -17,7 +17,13 @@ marty = User.create(nickname:"marty", password: "azerty", email: "marty@zoo.com"
 
 puts "Creating guilds..."
 
-adventurer = Guild.create!(name: "Adventurer", description: "the guild of the brave")
+adventurer = Guild.create!(name: "Adventurer", description: "The adventurer is self-confident and travels the world in search of challenges to improve himself.
+  Taking this path will answer these  problematics :
+  Improve your self-confidence
+  Learn to love yourself and to feel good enough
+  Stop judging yourself
+  Get oustide your comfort zone
+  Learn to embrace instability and failure")
 
 adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167316/Heroes%20app/Icons/pxArt_2_ihrfi7.png')
 adventurer.icon.attach(io: adventurericon, filename: 'adventurericon.jpg', content_type: 'image/jpg')
@@ -28,6 +34,8 @@ wizardicon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v165416
 mage.icon.attach(io: wizardicon, filename: 'wizardicon.png', content_type: 'image/png')
 
 puts "Creating quests..."
+
+# social_categorie_icon = URI.open('')
 
 adventurer_level_1_quest_1 = Quest.create!(level: 1, categorie: "SOCIAL", title: "5 qualities a day, keep insecurities away", content: "Choose 5 qualities that best define you",
   tips: "Think of someone you admire, what do you have in common ?
@@ -60,6 +68,7 @@ mage_level_1_quest_1 = Quest.create(level: 1, title:"TRY SOMETHING NEW mage", co
 
 puts "Creating Guild choice"
 
+GuildChoice.create(user: Rodrigo, guild: adventurer)
 GuildChoice.create(user: gerard, guild: adventurer)
 GuildChoice.create(user: jeanfrancois, guild: adventurer)
 GuildChoice.create(user: xavier, guild: mage)
