@@ -7,26 +7,82 @@ body {
   background-color: #0D465B;
 
 }
-.bodycontainer {
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(backgroundlogin.jpg);
-  background-size: contain;
-}
+// .bodycontainer {
+//   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(backgroundlogin.jpg);
+//   background-size: contain;
+//   justify-content: center;
+// }
 
 
 
 .homepage-container {
-  padding : 10px;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 5rem;
+  padding-top: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   color: white;
   h1 {
     font-family: $headers-font;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   p {
     font-family: $body-font;
+    text-align: center;
+    font-size: 14px;
   }
+}
+
+.img-quest-homepage .shiba {
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.img-quest-homepage {
+  background-color: $yellow;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.img-quest-homepage img {
+  width: 50%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-quest-homepage {
+  h1{
+    color: black;
+  }
+
+}
+
+.footer-homepage {
+  background-color: $light-blue;
+  margin-top: 50px;
+  padding-top: 20px;
+  text-align:left;
+
+
+  .footer-text {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.img-shiba-homepage img {
+  width: 35%;
+  float: right;
 }
