@@ -1,33 +1,29 @@
-<h1>Sign up</h1>
-
-  <div class="mx-auto">
-    <div class="opacite mt-4">
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
-
-        <div class="form-inputs backgroundinput">
-          <h1><%= f.input :nickname,
+<div class="mx-auto signup">
+  <h1>Sign up</h1>
+  <div class="opacite mx-auto p-4">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs backgroundinput">
+        <h2><%= f.input :nickname,
+                  required: true,
+                  input_html: { autocomplete: "nickname" } %></h2>
+        <h2><%= f.input :email,
                     required: true,
-                    input_html: { autocomplete: "nickname" } %></h1>
-          <h1><%= f.input :email,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" }%></h1>
-         <h1><%= f.input :password,
-                      required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                      input_html: { autocomplete: "new-password" } %></h1>
-          <h1><%= f.input :password_confirmation,
-                      required: true,
-                      input_html: { autocomplete: "new-password" } %></h1>
-        </div>
+                    autofocus: true,
+                    input_html: { autocomplete: "email" }%></h2>
+        <h2><%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %></h2>
+        <h2><%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %></h2>
+      </div>
 
-        <div class="form-actions">
-          <h1><%= f.button :submit, "Sign up", class: "btn-start" %></h1>
-        </div>
-      <% end %>
-   </div>
+      <div class="form-actions">
+        <h2><%= f.button :submit, "Sign up", class: "btn-start" %></h2>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
   </div>
-
-
-<%= render "devise/shared/links" %>
+</div>

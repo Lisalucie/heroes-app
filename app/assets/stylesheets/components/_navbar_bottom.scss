@@ -2,9 +2,11 @@
   background: $light-blue;
   position: fixed;
   width: 100vw;
-  height: 5rem;
+  // height: 5rem;
   bottom: 0px;
   z-index: 10;
+  height: 10vh;
+  padding-top: 20px;
 }
 
 .icons-bottom{

@@ -1,27 +1,17 @@
-// Specific CSS for your home-page
 a {
   text-decoration: none;
 }
 
 body {
   background-color: #0D465B;
+  --bs-gutter-x: 0;
 
 }
-// .bodycontainer {
-//   background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(backgroundlogin.jpg);
-//   background-size: contain;
-//   justify-content: center;
-// }
-
-
 
 .homepage-container {
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
-  padding-top: 20px;
-  // padding-left: 20px;
-  // padding-right: 20px;
+  padding-top: 50px;
   color: white;
   h1 {
     font-family: $headers-font;
@@ -36,7 +26,6 @@ body {
 }
 
 .img-quest-homepage .shiba {
-  width: 80%;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 20px;
@@ -46,8 +35,8 @@ body {
 .img-quest-homepage {
   background-color: $yellow;
   border-radius: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 70%;
   display: block;
   margin: 0 auto;
@@ -73,16 +62,43 @@ body {
   margin-top: 50px;
   padding-top: 20px;
   text-align:left;
-
-
   .footer-text {
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 5rem;
   }
 }
 
-
 .img-shiba-homepage img {
-  width: 35%;
-  float: right;
+  width: 20%;
+  right: -10%;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transform: scaleX(-1);
+}
+
+.quest-homepage-bubble{
+  position: relative;
+  background-color: $yellow;
+  border-radius: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.quest-homepage-bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid $yellow;
+  border-right: 12px solid transparent;
+  border-top: 12px solid $yellow;
+  border-bottom: 20px solid transparent;
+  left: 100px;
+  bottom: -24px;
 }
