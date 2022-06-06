@@ -18,5 +18,9 @@
         </div>
       </div>
   </div>
+  <% if @quest.occurences == 1 %>
     <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
+    <% else %>
+    <%= render "form_update_quest", quest: @quest, user_quest: @user_quest %>
+  <% end %>
 </div>

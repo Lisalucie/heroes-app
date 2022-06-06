@@ -11,7 +11,14 @@ class UserQuestsController < ApplicationController
   end
 
   def update
-    # mettre à jour les user_occurences via le update
+    @user_quest = UserQuest.find(params[:id])
+    if @user_quest.any?
+      @user_quest.update(user_quest_params)
+    end
+    if @user_quest.save
+      @user_quest.occurences!
+      update_occurences
+    end
   end
 
   private
@@ -27,4 +34,15 @@ class UserQuestsController < ApplicationController
       current_user.save
     end
   end
+  def update_occurences
+    current_user.user_quests.user_occurences = 0
+    if (current_user.user_quests.user_occurences < @quest.ocurrences) || (current_user.user_quests.user_occurences = 0)
+      current_user.user_ocurrences += 1
+      current_user.save
+
+    end
+
+  end
+
+
 end
