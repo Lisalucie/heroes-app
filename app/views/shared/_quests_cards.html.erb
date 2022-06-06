@@ -5,7 +5,7 @@
         <% user_quest = quest.user_quests %>
         <% if quest.user_quests.where(user: current_user).any? %>
           <div class="quest-card-validated">
-              <p><%= "#{quest.title} - 1/#{quest.occurences}"%></p>
+              <p><%= "#{quest.title} - /#{quest.occurences}"%></p>
               <div class="progress-bar-placement">
                 <div class=" progress-validated">
                   <div class="progress-bar">
@@ -15,7 +15,7 @@
             </div>
         <% else %>
           <div class="quest-card">
-            <p><%= "#{quest.title} - 1/#{quest.occurences}"%></p>
+            <p><%= "#{quest.title} - /#{quest.occurences}"%></p>
             <div class="progress-bar-placement">
               <div class="progress">
                 <div class="progress-bar">

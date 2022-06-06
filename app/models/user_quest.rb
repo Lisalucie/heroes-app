@@ -7,4 +7,10 @@ class UserQuest < ApplicationRecord
   def validated!
     update!(status: "validated")
   end
+
+  def occurences!
+    if @user_ocurrences.nil?
+      update!(user_ocurrences: 0)
+    end
+  end
 end
