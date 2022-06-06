@@ -2,9 +2,10 @@
   background: $light-blue;
   position: fixed;
   width: 100vw;
-  height: 5rem;
+  // height: 5rem;
   bottom: 0px;
   z-index: 10;
+  height: 10vh;
 }
 
 .icons-bottom{
@@ -28,3 +29,7 @@
     height: 50px;
   }
 }
+
+// .navbar-padding {
+//   padding-top: 5rem;
+// }

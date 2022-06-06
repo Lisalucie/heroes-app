@@ -1,27 +1,53 @@
-
-.form-inputs {
-
-  padding-right: 200px;
-  padding-left: 200px;
+.signup, .login {
+  height: 100vh;
   color: white;
+  position: fixed;
+  width: 100%;
+
+  h1 {
+    padding-top: 40px;
+    font-family: $headers-font;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-family: $shiba-font;
+    font-size: 20px;
+    color: white;
+  }
+  a {
+    color: white;
+  }
+
+  .form-inputs {
+    color: white;
+  }
+
+  .submit {
+    margin-left: 500px;
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 20px;
+  }
+  .form-control {
+    background-color: rgb(255, 230, 195);
+  }
+
+  .font-link {
+    color: white;
+  }
 }
 
-.form-actions {
-  padding-right: 200px;
-  padding-left: 200px;
-
+.signup {
+  background-image:url(https://res.cloudinary.com/df6z4mw2e/image/upload/v1654198365/Heroes%20app/Icons/backgroundlogin_eca2xy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 35%;
 }
 
-.submit {
-  margin-left: 500px;
-  padding-right: 100px;
-  padding-left: 100px;
-  font-size: 20px;
-}
-.form-control {
-  background-color: rgb(255, 230, 195);
-}
-
-.font-link {
-  color: white;
+.login {
+  background-image:url(https://res.cloudinary.com/df6z4mw2e/image/upload/v1654198365/Heroes%20app/Icons/backgroundlogin_eca2xy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 35%;
 }
