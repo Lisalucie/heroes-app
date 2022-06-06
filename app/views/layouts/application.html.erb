@@ -12,7 +12,7 @@
 
   <body>
     <% if user_signed_in? %>
-        <%= render'shared/navbar_user' if current_user.guild_choices.present? %>
+      <%= render'shared/navbar_user' if current_user.guild_choices.present? %>
     <% else %>
       <%= render 'shared/navbar_visitor' %>
     <% end %>

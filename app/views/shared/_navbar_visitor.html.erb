@@ -1,6 +1,6 @@
 
 
-<div class="navbar navbar-expand-sm navbar-light navbar-visitor">
+<div class="navbar navbar-expand-sm navbar-light navbar-visitor p-4">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <h1>Heroes</h1>
@@ -11,8 +11,12 @@
         <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png", class: "avatar-large"%>
       <% end %>
     <% else%>
-      <%= link_to "LOG IN", new_user_session_path, class: "btn-start" %>
-
+      <div class="relative-btn">
+        <%= link_to new_user_session_path, class: "cybr-btn d-flex justify-content-center" do  %>
+          Log in<span aria-hidden></span>
+          <span aria-hidden class="cybr-btn__glitch">Log in</span>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

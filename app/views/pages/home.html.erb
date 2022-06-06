@@ -1,57 +1,88 @@
 <div class="homepage-container">
-  <div class="row">
+  <div class="p-4">
     <div>
       <h1>Become the main character of your life !</h1>
       <p>Heroes, is the app that will help you attain your goals while making it a game.
       We will be with you, each step of the way. You don’t need to think ! Just follow our well-thought program and you won’t even realize you are working on yourself.
       Follow your destiny, become a hero. </p>
-      <%= link_to "BECOME A HERO", new_user_session_path, class: "btn-start space-button d-flex justify-content-center m-0 "  %>
-      <br>
-    <div class="img-quest-homepage">
-      <%= render 'shared/shiba' %>
-    </div>
-    </div>
-    <div>
-      <h1>Meet your guide</h1>
-      <p>A guide that will be your friend during your journey.</p>
-      <%= link_to "BEGIN MY JOURNEY", new_user_session_path, class: "btn-start space-button d-flex justify-content-center m-0"  %>
-      <br>
-      <p>Have you ever thought that you wanted to improve your life, but never knew where to begin ? That all the books on the market seemed too much time and not enough fun ?
-      You like challenges ? You like to play ? You want to improve yourself ?
-      Then Heroes is the right answer for you ! </p>
-    </div>
-    <div class="img-quest-homepage">
-      <%= image_tag "questspage.png"%>
-    </div>
-    <div>
-      <h1> Create an avatar & go on adventures </h1>
-      <p>We follow a traditional gameplay based on quests to level up</p>
-      <%= link_to "LET'S GO", new_user_session_path, class: "btn-start space-button d-flex justify-content-center m-0"  %>
-      <br>
-      <p>Our app follow a traditional gameplay that you have encountered before. Do a quest, gain experience, fill you gauge and level up, just like a game character !</p>
-      <p>When you begin, you choose a class that will fit your needs : either Merchant, for a healthy relationship with money, or Adventurer, to gain confidence.</p>
-      <p>Each path is divided into 10 levels. To gain a level, a certain amount of experience is needed. How to gain it ? By doing your daily quests !</p>
-      <p>Each day, you will have a number of missions to complete, based on the goal you chose. For example, if you wished to gain confidence, one of the quest might be to do some small-talk with a seller ! Once you validate it, you will gain experience: you are one step closer to become a hero. </p>
-    </div>
-    <div class=" img-quest-homepage bubble">
-      <h1>This is just the beginning of your journey, traveller</h1>
-    </div>
-    <div class="img-shiba-homepage">
-      <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png"%>
-    </div>
-    <div>
-      <%= link_to "START", new_user_session_path, class: "btn-start space-button d-flex justify-content-center m-0"  %>
-    </div>
 
-    <div class="footer-homepage">
-      <h1>Heroes</h1>
-      <div class="footer-text">
-        <p>The story of heroes</p>
-        <p>Terms</p>
-        <p>FAQ</p>
-        <p>Contact us</p>
-        <p>Meet the team behind heroes</p>
+      <div class="relative-btn">
+        <%= link_to new_user_session_path, class: "cybr-btn d-flex justify-content-center" do  %>
+          Become a hero<span aria-hidden></span>
+          <span aria-hidden class="cybr-btn__glitch">Become a hero</span>
+        <% end %>
       </div>
+
+      <br>
+      <div class="img-quest-homepage">
+        <%= render 'shared/shiba' %>
+      </div>
+
+      <div>
+        <h1>Meet your guide</h1>
+        <p>A guide that will be your friend during your journey.</p>
+        <div class="relative-btn">
+          <%= link_to new_user_session_path, class: "cybr-btn d-flex justify-content-center" do  %>
+            Become a hero<span aria-hidden></span>
+            <span aria-hidden class="cybr-btn__glitch">Become a hero</span>
+          <% end %>
+        </div>
+        <br>
+        <p>Have you ever thought that you wanted to improve your life, but never knew where to begin ? That all the books on the market seemed too much time and not enough fun ?
+        You like challenges ? You like to play ? You want to improve yourself ?
+        Then Heroes is the right answer for you ! </p>
+      </div>
+
+      <div class="img-quest-homepage">
+        <%= image_tag "questspage.png"%>
+      </div>
+
+      <div>
+        <h1> Create an avatar & go on adventures </h1>
+        <p>We follow a traditional gameplay based on quests to level up</p>
+
+        <div class="relative-btn">
+          <%= link_to new_user_session_path, class: "cybr-btn d-flex justify-content-center" do  %>
+            Become a hero<span aria-hidden></span>
+            <span aria-hidden class="cybr-btn__glitch">Become a hero</span>
+          <% end %>
+        </div>
+
+        <br>
+        <p>Our app follow a traditional gameplay that you have encountered before. Do a quest, gain experience, fill you gauge and level up, just like a game character !</p>
+        <p>When you begin, you choose a class that will fit your needs : either Merchant, for a healthy relationship with money, or Adventurer, to gain confidence.</p>
+        <p>Each path is divided into 10 levels. To gain a level, a certain amount of experience is needed. How to gain it ? By doing your daily quests !</p>
+        <p>Each day, you will have a number of missions to complete, based on the goal you chose. For example, if you wished to gain confidence, one of the quest might be to do some small-talk with a seller ! Once you validate it, you will gain experience: you are one step closer to become a hero. </p>
+      </div>
+
+      <div>
+        <div class="quest-homepage-bubble">
+          <h1>This is just the beginning of your journey, traveller</h1>
+        </div>
+
+        <div class="img-shiba-homepage">
+          <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png"%>
+        </div>
+
+        <div class="relative-btn">
+          <%= link_to new_user_session_path, class: "cybr-btn d-flex justify-content-center" do  %>
+            Become a hero<span aria-hidden></span>
+            <span aria-hidden class="cybr-btn__glitch">Become a hero</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%# FOOTER %>
+  <div class="footer-homepage">
+    <h1>Heroes</h1>
+    <div class="footer-text">
+      <p>The story of heroes</p>
+      <p>Terms</p>
+      <p>FAQ</p>
+      <p>Contact us</p>
+      <p>Meet the team behind heroes</p>
     </div>
   </div>
 </div>
