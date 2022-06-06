@@ -24,7 +24,7 @@ class UserQuestsController < ApplicationController
   private
 
   def user_quest_params
-    params.require(:user_quest).permit(:status, :user_occurences, :quest_id, :user_id)
+    params.require(:user_quest).permit(:status, :user_occurences, :quest_id, :user_id, :categorieicon_id)
   end
 
   def update_level

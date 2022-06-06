@@ -1,29 +1,15 @@
-.container {
-  padding-bottom: 200px;
-  width: auto;
-}
 
-.form-inputs{
-  color: white;
+.form-inputs {
+
   padding-right: 200px;
   padding-left: 200px;
+  color: white;
 }
 
 .form-actions {
   padding-right: 200px;
   padding-left: 200px;
-}
 
-.card-header-login {
-  color: white;
-  opacity: 0.8;
-  padding-top: 50px;
-}
-
-
-.form-position {
-  padding: 20px;
-  margin-top: 100px;
 }
 
 .submit {
@@ -32,9 +18,10 @@
   padding-left: 100px;
   font-size: 20px;
 }
+.form-control {
+  background-color: rgb(255, 230, 195);
+}
 
-.card-header-login {
-  font-size: 50px;
-  padding:16px;
-  font-weight:bold;
+.font-link {
+  color: white;
 }
