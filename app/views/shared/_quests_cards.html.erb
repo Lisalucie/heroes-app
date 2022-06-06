@@ -5,17 +5,46 @@
         <% user_quest = quest.user_quests %>
         <% if quest.user_quests.where(user: current_user).any? %>
           <div class="quest-card-validated">
-              <p><%= "#{quest.title} - /#{quest.occurences}"%></p>
-              <div class="progress-bar-placement">
-                <div class=" progress-validated">
+
+            <p><%= "#{quest.title} - /#{quest.occurences}"%></p>
+
+
+            <%# <div class="quest-icon">
+              <% if quest.categorie = "Social" %>
+                <%# <%= cl_image_tag quest.icon.key, height: 100 %> %>
+              <%# <% elsif quest.categorie = "Mental" %>
+                <%# <%= image_tag quest.icon.key, height: 100 %> %>
+              <%# <% elsif quest.categorie = "Physical" %> %>
+                <%# <%= image_tag quest.icon.key, height: 100 %> %>
+              <%# <% else %> %>
+              <%# <% end %> %>
+            <%# </div> %>
+
+
+            <div class="progress-bar-placement">
+              <div class=" progress-validated">
                   <div class="progress-bar">
                   </div>
-                </div>
               </div>
             </div>
+          </div>
+
         <% else %>
           <div class="quest-card">
             <p><%= "#{quest.title} - /#{quest.occurences}"%></p>
+
+            <div class="quest-icon">
+              <% if quest.categorie = "Social" %>
+                <img class="icon-category" src="app/assets/images/social.png" alt="Social icon.">
+              <% elsif quest.categorie = "Mental" %>
+                <img class="icon-category" src="app/assets/images/mental.png" alt="Mental icon.">
+              <% elsif quest.categorie = "Physical" %>
+                <img class="icon-category" src="app/assets/images/physical.png" alt="Physical icon.">
+              <% else %>
+              <% end %>
+            </div>
+
+
             <div class="progress-bar-placement">
               <div class="progress">
                 <div class="progress-bar">
