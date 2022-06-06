@@ -2,7 +2,7 @@
 
 <div class="navbar navbar-expand-sm navbar-light navbar-visitor">
   <div class="container-fluid">
-    <%= link_to new_user_session_path, class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <h1>Heroes</h1>
     <% end %>
 
@@ -14,9 +14,5 @@
       <%= link_to "LOG IN", new_user_session_path, class: "btn-start" %>
 
     <% end %>
-    <%# FOR HOMEPAGE = REMPLACE SHIBA BY LOGIN BUTTON %>
-    <%# <li class="nav-item">
-      <%= link_to "Login", new_user_session_path, class: "btn-start" %>
-    <%# </li> %>
   </div>
 </div>

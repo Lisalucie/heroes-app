@@ -19,8 +19,10 @@
   border: 3px solid $orange;
   font-family: $headers-font;
   min-width: 35%;
+  max-width: 90%;
   text-decoration: none;
   align-items: center;
+  transform: translateX(5%);
 
 	&:hover {
 		padding: 8px;

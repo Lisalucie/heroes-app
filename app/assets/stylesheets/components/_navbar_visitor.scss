@@ -4,6 +4,7 @@
   position: sticky;
   top: 0px;
   z-index: 10;
+
 }
 
 .navbar-visitor .navbar-collapse {
@@ -14,7 +15,7 @@
   width: 40px;
 }
 
- .navbar-brand h1 {
+.navbar-brand h1 {
   font-family: $headers-font;
   color: black;
   font-size: 20px;
