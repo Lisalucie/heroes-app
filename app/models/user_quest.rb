@@ -12,6 +12,7 @@ class UserQuest < ApplicationRecord
     if @user_ocurrences.nil?
       update!(user_ocurrences: 0)
     end
+  end
 
   def pending!
     update!(status: "pending")
