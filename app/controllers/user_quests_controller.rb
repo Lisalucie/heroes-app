@@ -37,5 +37,4 @@ class UserQuestsController < ApplicationController
       current_user.save
     end
   end
-
 end
