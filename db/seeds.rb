@@ -68,7 +68,7 @@ mage_level_1_quest_1 = Quest.create(level: 1, title:"TRY SOMETHING NEW mage", co
 
 puts "Creating Guild choice"
 
-GuildChoice.create(user: Rodrigo, guild: adventurer)
+
 GuildChoice.create(user: gerard, guild: adventurer)
 GuildChoice.create(user: jeanfrancois, guild: adventurer)
 GuildChoice.create(user: xavier, guild: mage)
