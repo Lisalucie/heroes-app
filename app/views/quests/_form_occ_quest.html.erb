@@ -4,6 +4,6 @@
 <%= hidden_field_tag "user_quest[user_occurences]", 1 %>
 <div class="d-flex justify-content-center dubble-button" >
   <%= link_to "BACK", quests_path, class: "btn-start space-button"  %>
-  <%= f.submit  "FINISH🤘", class: "btn-start", data: { "action": "click->progress-bar#updateBar" } %>
+  <%= f.submit  "BEGIN!", class: "btn-start", data: { "action": "click->progress-bar#updateBar" } %>
 </div>
 <% end %>

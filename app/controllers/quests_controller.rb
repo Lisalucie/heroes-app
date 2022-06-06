@@ -7,11 +7,14 @@ class QuestsController < ApplicationController
       @guild_choice = GuildChoice.new
       @guilds = Guild.all
     end
-    # , guild_id: current_user.guild_id
   end
 
   def show
     @quest = Quest.find(params[:id])
-    @user_quest = UserQuest.new
+    if current_user.user_quests.where(quest_id: @quest.id).any?
+      @user_quest = current_user.user_quests.where(quest_id: @quest.id).first
+    else
+      @user_quest = UserQuest.new
+    end
   end
 end
