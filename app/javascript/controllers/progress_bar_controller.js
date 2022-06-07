@@ -9,7 +9,6 @@ export default class extends Controller {
 
 
   updateBar() {
-    console.log("Coucou")
     console.log(this.progressBarTarget)
     this.progressBarTarget.classList.add("progress-striped")
   }

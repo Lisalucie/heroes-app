@@ -11,21 +11,20 @@
                 <% if quest.categorie == "Social" %>
                   <%=  image_tag "social.png", class:"icon-category", alt:"Social icon" %>
                 <% elsif quest.categorie == "Mental" %>
-                  <%=  image_tag "mental.png", class:"icon-category", alt:"Social icon" %>
+                  <%=  image_tag "mental.png", class:"icon-category", alt:"Mental icon" %>
                 <% elsif quest.categorie == "Physical" %>
-                  <%=  image_tag "physical.png", class:"icon-category", alt:"Social icon" %>
+                  <%=  image_tag "physical.png", class:"icon-category", alt:"Physical icon" %>
                 <% end %>
               </div>
               <%# TITLE %>
               <div class="flex-grow-1">
-                <p><%= "#{quest.title} - #{count}/#{quest.occurences}"%></p>
+                <p><%= "#{quest.title} -  #{current_user.user_quests.where(quest_id: quest.id).first&.user_occurences}/#{quest.occurences}"%></p>
               </div>
             </div>
 
-
             <div class="progress-bar-placement">
               <div class=" progress-validated">
-                  <div class="progress-bar"></div>
+                <div class="progress-bar"></div>
               </div>
             </div>
           </div>
@@ -42,14 +41,14 @@
                   <% if quest.categorie == "Social" %>
                     <%=  image_tag "social.png", class:"icon-category", alt:"Social icon" %>
                   <% elsif quest.categorie == "Mental" %>
-                    <%=  image_tag "mental.png", class:"icon-category", alt:"Social icon" %>
+                    <%=  image_tag "mental.png", class:"icon-category", alt:"Mental icon" %>
                   <% elsif quest.categorie == "Physical" %>
-                    <%=  image_tag "physical.png", class:"icon-category", alt:"Social icon" %>
+                    <%=  image_tag "physical.png", class:"icon-category", alt:"Physiccal icon" %>
                   <% end %>
                 </div>
                 <%# TITLE %>
                 <div class="flex-grow-1">
-                  <p><%= "#{quest.title} - #{count}/#{quest.occurences}"%></p>
+                  <p><%= "#{quest.title} -  #{current_user.user_quests.where(quest_id: quest.id).first&.user_occurences}/#{quest.occurences}"%></p>
                 </div>
               </div>
 
