@@ -1,7 +1,21 @@
 
-<div class="categorie-quest p-4">
-<h1><%= @quest.categorie.upcase %></h1>
+<div class="all-quest-category-show d-flex">
+  <%# ICON %>
+  <div class="quest-icon-show">
+    <% if @quest.categorie == "Social" %>
+      <%=  image_tag "social.png", class:"icon-category-show", alt:"Social icon" %>
+    <% elsif @quest.categorie == "Mental" %>
+      <%=  image_tag "mental.png", class:"icon-category-show", alt:"Social icon" %>
+    <% elsif @quest.categorie == "Physical" %>
+      <%=  image_tag "physical.png", class:"icon-category-show", alt:"Social icon" %>
+    <% end %>
+  </div>
+  <%# TITLE %>
+  <div class="category-quest-show p-2">
+    <h1><%= @quest.categorie.upcase %></h1>
+  </div>
 </div>
+
 
 <div class="container-user-quest" data-controller="progress-bar">
   <div class="col-12 col-md-6">
