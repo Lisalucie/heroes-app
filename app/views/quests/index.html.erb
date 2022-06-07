@@ -6,6 +6,7 @@
 
     <% if params[:leveled_up].present? %>
       <div class="modal-overlay" id="modal-overlay"></div>
+
       <div class="modal" id="modal">
         <div class="modal-body">
           <h1>Congratulations !</h1>
@@ -15,6 +16,7 @@
         <%= link_to "Continue my journey", quests_path, class: "modal-button" %>
       </div>
     <% end %>
+
 
   <% else %>
     <div class="swiper guild-cards">
@@ -33,8 +35,6 @@
       </div>
     </div>
   <% end %>
-
-
 </div>
 
 
