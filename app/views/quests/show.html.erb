@@ -34,22 +34,23 @@
         </div>
       </div>
 
-      <div class="answer-area input-group">
-        <%# <div class="input-group-prepend"> %>
-          <%# <span class="input-group-text">My answer</span> %>
-        <%# </div> %>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+      <div class="answer-area">
+        <div class="form-outline">
+          <textarea class="form-control" id="textAreaExample2" rows="8" placeholder="Put your thoughts here if needed 🌟"></textarea>
+        </div>
       </div>
     </div>
   </div>
 
-  <% if @quest.occurences == 1 %>
-    <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
-  <% else %>
-    <% if current_user.user_quests.where(quest_id: @quest.id).any? %>
-      <%= render "form_update_quest", quest: @quest, user_quest: @user_quest %>
+  <div>
+    <% if @quest.occurences == 1 %>
+      <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
     <% else %>
-      <%= render "form_occ_quest", quest: @quest, user_quest: @user_quest %>
+      <% if current_user.user_quests.where(quest_id: @quest.id).any? %>
+        <%= render "form_update_quest", quest: @quest, user_quest: @user_quest %>
+      <% else %>
+        <%= render "form_occ_quest", quest: @quest, user_quest: @user_quest %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
