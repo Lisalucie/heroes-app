@@ -5,12 +5,12 @@ class UserQuestsController < ApplicationController
 
     # @user_quest.user = current_user
     if @user_quest.save
-      # add if else according to occurences number
       if @quest.occurences == 1
         @user_quest.validated!
-      else #(creer methode pending dans le model)
+      else
         @user_quest.pending!
       end
+      sleep(2.0)
       update_level_and_redirect
     end
   end
@@ -22,6 +22,7 @@ class UserQuestsController < ApplicationController
     if @user_quest.save && @user_quest.user_occurences == @quest.occurences
       @user_quest.validated!
     end
+    sleep(2.0)
     update_level_and_redirect
   end
 

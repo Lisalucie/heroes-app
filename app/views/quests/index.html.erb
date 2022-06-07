@@ -4,23 +4,17 @@
   <% if current_user.guild_choices.present? %>
     <%= render 'shared/quests_cards' %>
 
-
-
     <% if params[:leveled_up].present? %>
+      <div class="modal-overlay" id="modal-overlay"></div>
       <div class="modal" id="modal">
         <div class="modal-body">
           <h1>Congratulations !</h1>
           <h2>You have leveled up !</h2>
           <h2>If you keep going, you'll slay dragon sooner than you think.</h2>
         </div>
-
-        <%# <button class="button" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#modal">Continue my journey</button> %>
-        <%= link_to "Continue my journey", quests_path, class: "button" %>
+        <%= link_to "Continue my journey", quests_path, class: "modal-button" %>
       </div>
     <% end %>
-
-
-
 
   <% else %>
     <div class="swiper guild-cards">
