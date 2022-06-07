@@ -19,20 +19,32 @@
 
 
   <% else %>
-    <div class="swiper guild-cards">
-      <div class="swiper-wrapper">
-        <% @guilds.each do |guild| %>
-          <div class="swiper-slide guild-card">
-            <input type="checkbox" class="guild-choice" id="<%= guild.name %>">
-            <label for="<%= guild.name %>">
-              <%= cl_image_tag guild.icon.key%>
-              <h1><%= guild.name %></h1>
-              <p><%= guild.description %></p>
-            </label>
-            <%= render "form", guild: guild, guild_choice: @guild_choice %>
-          </div>
-        <% end %>
+    <%= simple_form_for @guild_choice, url: guild_choices_path, method: :create do |f| %>
+      <%= hidden_field_tag "guild_choice[user_id]", current_user.id %>
+      <div class="swiper guild-cards">
+        <div class="swiper-wrapper">
+          <% @guilds.each do |guild| %>
+            <div class="swiper-slide guild-card">
+              <div classe="guild-choice">
+                <%= f.radio_button(:guild_id, guild.id, id: "guild_choice_#{guild.name}", class: "guild-button" ) %>
+                <%= f.label guild.name do %>
+                  <%= cl_image_tag guild.icon.key%>
+                  <h1><%= guild.name %></h1>
+                  <p><%= guild.description %></p>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
+
+      <div class="relative-btn">
+        <button type="submit" class="cybr-btn d-flex justify-content-center">
+          Choose this guild<span aria-hidden></span>
+          <span aria-hidden class="cybr-btn__glitch">Choose this guild</span>
+        </button>
+      </div>
+    <% end %>
+
   <% end %>
 </div>

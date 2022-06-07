@@ -1,20 +1,27 @@
 .guild-choice-container {
   margin-bottom: 5rem;
 
+
   .guild-card {
     padding: 1rem;
     width: 100vw;
+    height: fit-content;
 
-    .guild-choice {
+    .guild-start {
+      align-items: center;
+    }
+    .guild-button {
       position: absolute;
       transform: scale(0);
     }
-    .guild-choice + label {
+
+    .guild-button + label {
       background-color: $light-blue;
       width: 100%;
       padding: 2rem;
       border: 20px solid $dark-blue;
       cursor: pointer;
+      height: 505px;
 
       img {
         width: 10rem;
@@ -23,7 +30,7 @@
       }
     }
 
-    .guild-choice:checked + label{
+    .guild-button:checked + label{
       background-color: $yellow;
       border-color: $orange;
     }

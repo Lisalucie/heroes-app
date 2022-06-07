@@ -1,6 +1,0 @@
-
-<%= simple_form_for guild_choice, url: guild_choices_path, method: :create do |f| %>
-  <%= hidden_field_tag "guild_choice[user_id]", current_user.id %>
-  <%= hidden_field_tag "guild_choice[guild_id]", guild.id %>
-  <%= f.submit  "Choisissez votre guilde", class: "btn btn-primary" %>
-<% end %>

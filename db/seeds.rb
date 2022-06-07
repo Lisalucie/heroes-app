@@ -25,10 +25,17 @@ adventurer = Guild.create!(name: "Adventurer", description: "The adventurer is s
   Get oustide your comfort zone
   Learn to embrace instability and failure")
 
+
+mage = Guild.create!(name: "Mage", description: "The mage is the tranquil power that travels the world in search of wisdom.
+  Taking this path will answer these  problematics :
+  Improve your motivation
+  Learn to take a step back and live in the present
+  Stop feeling overwhelmed and anxious
+  Get better at letting go
+  Learn who you are")
+
 adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167316/Heroes%20app/Icons/pxArt_2_ihrfi7.png')
 adventurer.icon.attach(io: adventurericon, filename: 'adventurericon.jpg', content_type: 'image/jpg')
-
-mage = Guild.create(name: "Mage", description: "the guild of the curious")
 
 wizardicon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167323/Heroes%20app/Icons/pxArt_wpthzz.png')
 mage.icon.attach(io: wizardicon, filename: 'wizardicon.png', content_type: 'image/png')
