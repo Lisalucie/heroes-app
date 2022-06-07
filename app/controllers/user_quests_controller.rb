@@ -5,19 +5,22 @@ class UserQuestsController < ApplicationController
 
     # @user_quest.user = current_user
     if @user_quest.save
-      @user_quest.validated!
+      # add if else according to occurences number
+      if @quest.occurences == 1
+        @user_quest.validated!
+      else #(creer methode pending dans le model)
+        @user_quest.pending!
+      end
       update_level
     end
   end
 
   def update
+    @quest = Quest.find(params[:quest_id])
     @user_quest = UserQuest.find(params[:id])
-    if @user_quest.any?
-      @user_quest.update(user_quest_params)
-    end
-    if @user_quest.save
-      @user_quest.occurences!
-      update_occurences
+    @user_quest.user_occurences += 1 if @user_quest.user_occurences < @quest.occurences
+    if @user_quest.save && @user_quest.user_occurences == @quest.occurences
+      @user_quest.validated!
     end
   end
 
@@ -29,20 +32,9 @@ class UserQuestsController < ApplicationController
 
   def update_level
     number_of_quest_validated = current_user.user_quests.where(status: "validated").count # => 12
-    if number_of_quest_validated == 5 || number_of_quest_validated == 10 || number_of_quest_validated == 15
+    if (number_of_quest_validated == 5 && current_user.level == 1) || (number_of_quest_validated == 10  && current_user.level == 2)  || (number_of_quest_validated == 15  && current_user.level == 3)
       current_user.level += 1
       current_user.save
     end
   end
-  def update_occurences
-    current_user.user_quests.user_occurences = 0
-    if (current_user.user_quests.user_occurences < @quest.ocurrences) || (current_user.user_quests.user_occurences = 0)
-      current_user.user_ocurrences += 1
-      current_user.save
-
-    end
-
-  end
-
-
 end

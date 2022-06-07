@@ -13,4 +13,13 @@ class UserQuest < ApplicationRecord
       update!(user_ocurrences: 0)
     end
   end
+
+  def pending!
+    update!(status: "pending")
+  end
+
+  def validated?
+    status == "validated"
+  end
+
 end

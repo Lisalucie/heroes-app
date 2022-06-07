@@ -1,4 +1,5 @@
-<div class="categorie-quest">
+
+<div class="categorie-quest p-4">
 <h1><%= "#{(@quest.categorie).capitalize}"%></h1>
 </div>
 
@@ -22,7 +23,11 @@
   </div>
   <% if @quest.occurences == 1 %>
     <%= render "form_quest", quest: @quest, user_quest: @user_quest %>
+  <% else %>
+    <% if current_user.user_quests.where(quest_id: @quest.id).any? %>
+      <%= render "form_update_quest", quest: @quest, user_quest: @user_quest %>
     <% else %>
-    <%= render "form_update_quest", quest: @quest, user_quest: @user_quest %>
+      <%= render "form_occ_quest", quest: @quest, user_quest: @user_quest %>
+    <% end %>
   <% end %>
 </div>
