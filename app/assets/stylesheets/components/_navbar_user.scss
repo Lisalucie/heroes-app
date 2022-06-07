@@ -37,8 +37,6 @@
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
-
-
     h2, p {
       margin-bottom: 0;
     }
@@ -50,7 +48,6 @@
       font-size: 30px;
       line-height: 25px;
     }
-
     .level {
       color: $orange;
     }
@@ -61,12 +58,4 @@
 .progress-bar-user {
   display: flex;
   justify-content: left;
-}
-
-.navbar-user .progress {
-  padding: 6px;
-  width: 90%;
-  margin-bottom: 8px;
-  background: white;
-  box-shadow: 0 1px 2px $blue;
 }

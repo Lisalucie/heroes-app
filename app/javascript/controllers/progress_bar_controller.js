@@ -1,7 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["progressBar"]
+  static targets = ["progressBar", "progressUser"]
 
   // connect() {
   //   console.log("Hello from progress bar")
@@ -12,5 +12,8 @@ export default class extends Controller {
     console.log(this.progressBarTarget)
     this.progressBarTarget.classList.add("progress-striped")
   }
+
+
+  
 
 }
