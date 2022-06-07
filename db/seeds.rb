@@ -55,7 +55,7 @@ adventurer_level_1_quest_2 = Quest.create(level: 1, categorie: "Social", title: 
   tips: "Asking other will reveal your 'blind spots', which are aspects of yourself that you don't realise ! Enjoy a coffee and share a positive moment with your friend.", occurences: 1, guild: adventurer)
 adventurer_level_1_quest_3 = Quest.create(level: 1, categorie: "Mental", title: "A Padawan needs a Jedi", content: "Who do you admire ? Who was your hero when you were younger? Choose at least 2 persons (fictional or real) that inspire you. What values do they have ? ",
   tips: "Let these persons guide you ! Copy what you like about them and let their experiences become your own.", occurences: 1, guild: adventurer)
-adventurer_level_1_quest_4 = Quest.create(level: 1, categorie: "Social", title: "Small talk with the an outside player", content: "Today, when you go to the grocery shop, do some small-talk with the seller ! They might give you a side quest... ",
+adventurer_level_1_quest_4 = Quest.create(level: 1, categorie: "Social", title: "Small talk with an outside player", content: "Today, when you go to the grocery shop, do some small-talk with the seller ! They might give you a side quest... ",
   tips: "Smile ! People are more likely to answer if you begin with a smile. Begin small : make eye contact and see if they welcome the interaction. And most of all : have fun ! ", occurences: 1, guild: adventurer)
 adventurer_level_1_quest_5 = Quest.create(level: 1, categorie: "Mental", title: "A positive icon", content: " For the next hour only talk in positive sentence. Heroes need to be positive in order to overcome the difficulties they might face.",
   tips: "You might think negatively but don't say it out loud, this the key in succeeding this challenge !
@@ -70,7 +70,7 @@ adventurer_level_2_quest_3 = Quest.create(level: 2, categorie: "Physical", title
   tips: "If you're a beginner, walking 30 minutes also counts ! If you feel up to the challenge, you can check out Darebee for some epic workout inspiration", occurences: 2, guild: adventurer)
 adventurer_level_2_quest_4 = Quest.create(level: 2, categorie: "Mental", title: "I am a hero", content: "Today we're going to visualize our goals! Find somewhere quiet, get comfortable, close your eyes and picture in your mind the things that you want in your life.",
   tips: "Too hard ? Do a visualization board instead : print pictures of your dream life, and glue them on a big piece of paper. Put the final product somewhere where you can always see it", occurences: 1, guild: adventurer)
-adventurer_level_2_quest_5 = Quest.create(level: 2, categorie: "Mental", title: "Peaceful kingodom", content: "Take an inventory of your quests so far:your successes, your failures, your likes and dislikes. You're only at the beginning of your journey, it's normal to struggle. You can't expect to slay a dragon so early in the game...",
+adventurer_level_2_quest_5 = Quest.create(level: 2, categorie: "Mental", title: "Peaceful kingdom", content: "Take an inventory of your quests so far:your successes, your failures, your likes and dislikes. You're only at the beginning of your journey, it's normal to struggle. You can't expect to slay a dragon so early in the game...",
   tips: "Accept limitations : you can't control everything. Didn't finish a challenge ? What can I change about myself or the situation to make it better ? If it's outside of your control, let it go.", occurences: 1, guild: adventurer)
 
 
