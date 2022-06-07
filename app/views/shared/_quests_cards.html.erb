@@ -7,23 +7,26 @@
 
             <p><%= "#{quest.title} -  #{current_user.user_quests.where(quest_id: quest.id).first&.user_occurences}/#{quest.occurences}"%></p>
 
-
-            <%# <div class="quest-icon">
-              <% if quest.categorie = "Social" %>
-                <%# <%= cl_image_tag quest.icon.key, height: 100 %>
-              <%# <% elsif quest.categorie = "Mental" %>
-                <%# <%= image_tag quest.icon.key, height: 100 %>
-              <%# <% elsif quest.categorie = "Physical" %>
-                <%# <%= image_tag quest.icon.key, height: 100 %>
-              <%# <% else %>
-              <%# <% end %> 
-            <%# </div> %>
-
+            <div class="d-flex">
+              <%# ICON %>
+              <div class="quest-icon">
+                <% if quest.categorie == "Social" %>
+                  <%=  image_tag "social.png", class:"icon-category", alt:"Social icon" %>
+                <% elsif quest.categorie == "Mental" %>
+                  <%=  image_tag "mental.png", class:"icon-category", alt:"Social icon" %>
+                <% elsif quest.categorie == "Physical" %>
+                  <%=  image_tag "physical.png", class:"icon-category", alt:"Social icon" %>
+                <% end %>
+              </div>
+              <%# TITLE %>
+              <div class="flex-grow-1">
+                <p><%= "#{quest.title} - #{count}/#{quest.occurences}"%></p>
+              </div>
+            </div>
 
             <div class="progress-bar-placement">
               <div class=" progress-validated">
-                  <div class="progress-bar">
-                  </div>
+                  <div class="progress-bar"></div>
               </div>
             </div>
           </div>
@@ -33,24 +36,27 @@
           <%= link_to (quest_path(quest)) do%>
             <div class="quest-card">
               <% count = current_user.user_quests.where(quest_id: quest.id).first ? current_user.user_quests.where(quest_id: quest.id).first.user_occurences : 0 %>
-              <p><%= "#{quest.title} - #{count}/#{quest.occurences}"%></p>
 
-              <div class="quest-icon">
-              <% if quest.categorie = "Social" %>
-                <img class="icon-category" src="app/assets/images/social.png" alt="Social icon.">
-              <% elsif quest.categorie = "Mental" %>
-                <img class="icon-category" src="app/assets/images/mental.png" alt="Mental icon.">
-              <% elsif quest.categorie = "Physical" %>
-                <img class="icon-category" src="app/assets/images/physical.png" alt="Physical icon.">
-              <% else %>
-              <% end %>
-            </div>
+              <div class="d-flex">
+                <%# ICON %>
+                <div class="quest-icon">
+                  <% if quest.categorie == "Social" %>
+                    <%=  image_tag "social.png", class:"icon-category", alt:"Social icon" %>
+                  <% elsif quest.categorie == "Mental" %>
+                    <%=  image_tag "mental.png", class:"icon-category", alt:"Mental icon" %>
+                  <% elsif quest.categorie == "Physical" %>
+                    <%=  image_tag "physical.png", class:"icon-category", alt:"Physiccal icon" %>
+                  <% end %>
+                </div>
+                <%# TITLE %>
+                <div class="flex-grow-1">
+                  <p><%= "#{quest.title} - #{count}/#{quest.occurences}"%></p>
+                </div>
+              </div>
 
               <div class="progress-bar-placement">
                 <div class="progress">
-                  <div class="progress-bar">
-                  </div>
-
+                  <div class="progress-bar"></div>
                 </div>
               </div>
             </div>

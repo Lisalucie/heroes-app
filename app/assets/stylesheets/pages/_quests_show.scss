@@ -5,16 +5,24 @@
   align-items: center;
 }
 
+
+// CSS for hole category
+
+.icon-category-show {
+  width: 80px;
+  filter: invert(100%);
+}
+
+.all-quest-category-show {
+  color: white;
+  padding-top: 15px;
+  justify-content: center;
+}
+
 h5, h1 {
   font-family: $shiba-font;
   text-align: center;
 }
-
-.categorie-quest {
-  color: white;
-  padding-top: 15px;
-}
-
 
 .card-quest {
   background-color: $light-blue;
