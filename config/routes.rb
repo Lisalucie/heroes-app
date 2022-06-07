@@ -2,9 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "users/registrations" }
   root to: 'pages#home'
-  # resources :guild, only: :index do
-  #   resources :guild_choices, only: :show
-  # end
 
   resources :quests, only: [:index, :show] do
     resources :user_quests, only: [:create, :update]
