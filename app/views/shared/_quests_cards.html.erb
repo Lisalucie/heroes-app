@@ -4,7 +4,6 @@
       <% @quests.each do |quest| %>
         <% if quest.user_quests.where(user: current_user).first&.validated? %>
           <div class="quest-card-validated">
-
             <div class="d-flex">
               <%# ICON %>
               <div class="quest-icon">
@@ -21,20 +20,19 @@
                 <p><%= "#{quest.title} -  #{current_user.user_quests.where(quest_id: quest.id).first&.user_occurences}/#{quest.occurences}"%></p>
               </div>
             </div>
-
+            <%# PROGRESS BAR%>
             <div class="progress-bar-placement">
               <div class=" progress-validated">
                 <div class="progress-bar"></div>
               </div>
             </div>
           </div>
-
         <% else %>
-
-          <%= link_to (quest_path(quest)) do%>
+          <%= link_to (quest_path(quest)), local: true do %>
+            <%# CARD %>
             <div class="quest-card">
               <% count = current_user.user_quests.where(quest_id: quest.id).first ? current_user.user_quests.where(quest_id: quest.id).first.user_occurences : 0 %>
-
+              <%# HEADER %>
               <div class="d-flex">
                 <%# ICON %>
                 <div class="quest-icon">
@@ -52,9 +50,16 @@
                 </div>
               </div>
 
-              <div class="progress-bar-placement">
+              <%# BODY %>
+              <div class="progress-bar-placement" data-progress-bar-target="progressBar">
                 <div class="progress">
-                  <div class="progress-bar"></div>
+                  <% if current_user.user_quests.where(quest_id: quest.id).first&.user_occurences.nil? %>
+                    <div class="progress-bar card-bar" style="width:0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  <% elsif current_user.user_quests.where(quest_id: quest.id).first&.user_occurences == quest.occurences %>
+                    <div class="progress-bar card-bar" style="width:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <% else %>
+                    <div class="progress-bar card-bar" style="width:<%= (100 * current_user.user_quests.where(quest_id: quest.id).first&.user_occurences) / quest.occurences %>%" role="progressbar" aria-valuenow="<%= (100 * current_user.user_quests.where(quest_id: quest.id).first&.user_occurences) / quest.occurences %>" aria-valuemin="0" aria-valuemax="100"></div>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -64,4 +69,3 @@
     </div>
   </div>
 </div>
-<%# Pour les occurences, si les user_quest existes, alors on met le code l'occurence, sinon, on met 0 / %>

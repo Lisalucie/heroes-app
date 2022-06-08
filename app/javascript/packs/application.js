@@ -12,10 +12,11 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "controllers"
 import "bootstrap"
 
 import { initSwiper } from "../plugins/init_swiper"
+
+import "controllers"
 
 document.addEventListener("turbolinks:load", function() {
   initSwiper();

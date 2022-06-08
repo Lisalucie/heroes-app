@@ -21,12 +21,20 @@
       padding: 2rem;
       border: 20px solid $dark-blue;
       cursor: pointer;
-      height: 505px;
+      height: 600px;
 
       img {
         width: 10rem;
         margin: auto;
         display: flex;
+      }
+
+      .guild-description{
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
+        display: list-item;
+        list-style-position: inside;
       }
     }
 
