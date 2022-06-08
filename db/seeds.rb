@@ -29,7 +29,7 @@ mage.icon.attach(io: wizardicon, filename: 'wizardicon.png', content_type: 'imag
 
 puts "Creating quests..."
 
-adventurer_level_1_quest_1 = Quest.create!(level: 1, title: "5 qualities a day, keep insecurities away", content: "Choose 5 qualities that best define you",
+adventurer_level_1_quest_1 = Quest.create!(level: 1, title: "5 qualities a day, insecurities away", content: "Choose 5 qualities that best define you",
   tips: "Think of someone you admire, what do you have in common ?
   It may be easier to begin with general qualities ('I am kind') before diving deeper !", occurences: 1, guild: adventurer)
 adventurer_level_1_quest_2 = Quest.create(level: 1, title: "Friends will guide you", content: "Let's keep going with your progress ! Now that you have defined 5 qualities by yourself, ask 3 friends what they think your qualities are",
@@ -53,7 +53,6 @@ adventurer_level_2_quest_4 = Quest.create(level: 2, title: "I am a hero", conten
   tips: "Too hard ? Do a visualization board instead : print pictures of your dream life, and glue them on a big piece of paper. Put the final product somewhere where you can always see it", occurences: 1, guild: adventurer)
 adventurer_level_2_quest_5 = Quest.create(level: 2, title: "Peaceful kingodom", content: "Take an inventory of your quests so far:your successes, your failures, your likes and dislikes. You're only at the beginning of your journey, it's normal to struggle. You can't expect to slay a dragon so early in the game...",
   tips: "Accept limitations : you can't control everything. Didn't finish a challenge ? What can I change about myself or the situation to make it better ? If it's outside of your control, let it go.", occurences: 1, guild: adventurer)
-
 
 
 mage_level_1_quest_1 = Quest.create(level: 1, title:"TRY SOMETHING NEW mage", content: "Lorem ipsum", tips: "Lorem ipsum", occurences: 1, guild: mage)
