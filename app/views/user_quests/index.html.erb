@@ -1,0 +1,48 @@
+
+<div class="history-container col-12">
+
+  <div class="history-title">
+    <h1>Your journey history</h1>
+    <p>Good job ! Look at what you manage to do so far 💪</p>
+  </div>
+
+  <div class="quests-list">
+    <% @user_quests.each do |user_quest| %>
+
+      <%# <p><%= "#{user_quest.quest.title} -  #{current_user.user_quests.where(user_quest.quest user_quest.quest.id).first&.user_occurences}/#{user_quest.quest.occurences}"%></p> %>
+
+      <div class="quest-card-validated">
+        <b><p>Level <%= user_quest.quest.level %></p></b>
+
+        <div class="d-flex">
+          <div class="quest-icon">
+            <% if user_quest.quest.categorie == "Social" %>
+              <%=  image_tag "social.png", class:"icon-category", alt:"Social icon" %>
+            <% elsif user_quest.quest.categorie == "Mental" %>
+              <%=  image_tag "mental.png", class:"icon-category", alt:"Mental icon" %>
+            <% elsif user_quest.quest.categorie == "Physical" %>
+              <%=  image_tag "physical.png", class:"icon-category", alt:"Physical icon" %>
+            <% end %>
+          </div>
+
+          <div  class="flex-grow-1">
+            <p><%= user_quest.quest.title  %></p>
+          </div>
+        </div>
+
+        <div>
+        <p><%= user_quest.quest.content  %></p>
+        </div>
+
+        <div class="progress-bar-placement">
+          <div class=" progress-validated">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+
+</div>

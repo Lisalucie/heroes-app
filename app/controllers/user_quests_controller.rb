@@ -1,4 +1,21 @@
 class UserQuestsController < ApplicationController
+
+  def index
+    # @quests = Quest.where(user_id: current_user.id)
+    # # history
+
+    # if params[:query]
+    #   sql_query = "name ILIKE :query OR specie ILIKE :query"
+    #   @quests = Quest.where(sql_query, query: "%#{params[:query]}%")
+    # else
+    #   @quests = Quest.all
+    # end
+    
+    @user_quests = UserQuest.where(user: current_user, status: "validated")
+
+  end
+
+
   def create
     @quest = Quest.find(params[:quest_id])
     @user_quest = UserQuest.new(user_quest_params)
