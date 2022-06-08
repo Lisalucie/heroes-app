@@ -16,22 +16,10 @@ marty = User.create(nickname:"marty", password: "azerty", email: "marty@zoo.com"
 
 puts "Creating guilds..."
 
-adventurer = Guild.create!(name: "Adventurer", description: "The adventurer is self-confident and travels the world in search of challenges to improve himself.
-  Taking this path will answer these  problematics :
-  Improve your self-confidence
-  Learn to love yourself and to feel good enough
-  Stop judging yourself
-  Get oustide your comfort zone
-  Learn to embrace instability and failure")
+adventurer = Guild.create!(name: "Adventurer")
 
 
-mage = Guild.create!(name: "Mage", description: "The mage is the tranquil power that travels the world in search of wisdom.
-  Taking this path will answer these  problematics :
-  Improve your motivation
-  Learn to take a step back and live in the present
-  Stop feeling overwhelmed and anxious
-  Get better at letting go
-  Learn who you are")
+mage = Guild.create!(name: "Mage")
 
 adventurericon = URI.open('https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167316/Heroes%20app/Icons/pxArt_2_ihrfi7.png')
 adventurer.icon.attach(io: adventurericon, filename: 'adventurericon.jpg', content_type: 'image/jpg')

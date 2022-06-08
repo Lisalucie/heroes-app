@@ -1,7 +1,6 @@
 .guild-choice-container {
   margin-bottom: 5rem;
 
-
   .guild-card {
     padding: 1rem;
     width: 100vw;
@@ -21,7 +20,6 @@
       padding: 2rem;
       border: 20px solid $dark-blue;
       cursor: pointer;
-      height: 600px;
 
       img {
         width: 10rem;
@@ -29,18 +27,22 @@
         display: flex;
       }
 
-      .guild-description{
-        list-style-type: none;
-        display: inline-block;
-        position: relative;
-        display: list-item;
-        list-style-position: inside;
-      }
+
     }
 
     .guild-button:checked + label{
       background-color: $yellow;
       border-color: $orange;
+    }
+    .guild-description{
+
+      h2 {
+        font-family: $shiba-font;
+        color: black;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
