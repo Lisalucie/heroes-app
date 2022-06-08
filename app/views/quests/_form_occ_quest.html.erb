@@ -1,4 +1,5 @@
 <%= simple_form_for user_quest, url: quest_user_quests_path(quest), method: :post do |f| %>
+<%= f.input :comment%>
 <%= hidden_field_tag "user_quest[user_id]", current_user.id %>
 <%= hidden_field_tag "user_quest[quest_id]", quest.id %>
 <%= hidden_field_tag "user_quest[user_occurences]", 1 %>
