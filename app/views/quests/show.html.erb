@@ -17,7 +17,7 @@
 </div>
 
 
-<div class="container-user-quest" data-controller="progress-bar">
+<div class="container-user-quest" data-controller="progress-bar comment">
   <div class="col-12 col-md-6">
     <div class="card card-quest">
       <div class="shiba">
@@ -44,7 +44,7 @@
 
       <div class="answer-area">
         <div class="form-outline">
-          <textarea class="form-control" id="textAreaExample2" rows="8" placeholder="Put your thoughts here if needed 🌟"></textarea>
+          <textarea class="form-control" data-action="keyup->comment#fillOutput" id="textAreaExample2" rows="8" placeholder="Put your thoughts here if needed 🌟"></textarea>
         </div>
       </div>
     </div>
