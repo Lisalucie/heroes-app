@@ -10,12 +10,10 @@ class UserQuestsController < ApplicationController
     # else
     #   @quests = Quest.all
     # end
-
-
+    
     @user_quests = UserQuest.where(user: current_user, status: "validated")
 
-
-    end
+  end
 
 
   def create
