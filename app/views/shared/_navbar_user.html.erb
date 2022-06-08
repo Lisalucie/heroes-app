@@ -8,9 +8,8 @@
       <div class="level-infos">
         <p class="level">Level <%= current_user.level %></p>
         <div class="progress-bar-user">
-
           <div class="progress active">
-            <div class="progress-bar" style="width: <%= (current_user.user_quests.count - ((current_user.level - 1) * 5)) * 20 %>%" role="progressbar" aria-valuenow="<%= (current_user.user_quests.count - ((current_user.level - 1) * 5)) * 20 %>" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar user-bar" style="width: <%= (current_user.user_quests.count - ((current_user.level - 1) * 5)) * 20 %>%" role="progressbar" aria-valuenow="<%= (current_user.user_quests.count - ((current_user.level - 1) * 5)) * 20 %>" aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
         </div>

@@ -30,7 +30,9 @@
                 <%= f.label guild.name do %>
                   <%= cl_image_tag guild.icon.key%>
                   <h1><%= guild.name %></h1>
-                  <p><%= guild.description %></p>
+                  <div class="guild-description">
+                    <%= guild.description %>
+                  </div>
                 <% end %>
               </div>
             </div>
