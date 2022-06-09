@@ -1,5 +1,5 @@
 
-<div class="history-container col-12">
+<div class="guild-choice-container col-12">
 
   <div class="history-title">
     <h1>Your journey history</h1>
@@ -10,9 +10,11 @@
     <% @user_quests.each do |user_quest| %>
 
       <div class="quest-card-validated">
-        <b><p>Level <%= user_quest.quest.level %></p></b>
+        <div class="level">
+          <b><p>Level <%= user_quest.quest.level %></p></b>
+        </div>
 
-        <div class="d-flex">
+        <div class="quest-history d-flex">
           <div class="quest-icon">
             <% if user_quest.quest.categorie == "Social" %>
               <%=  image_tag "social.png", class:"icon-category", alt:"Social icon" %>
@@ -23,13 +25,12 @@
             <% end %>
           </div>
 
-          <div  class="flex-grow-1">
-            <p><%= user_quest.quest.title  %></p>
+          <div  class="quest-title">
+            <p>- <%= user_quest.quest.title %></p>
           </div>
         </div>
-
-        <div>
-        <p><%= user_quest.quest.content  %></p>
+        <div class= "quest-content">
+          <p><%= user_quest.quest.content  %></p>
         </div>
 
         <div class="progress-bar-placement">
@@ -38,9 +39,18 @@
           </div>
         </div>
 
-        <div>
-          <p><%= user_quest.comment  %></p>
-        </div>
+
+        <% unless user_quest.comment == ""  %>
+          <div class="bubble">
+            <div class="bubble-text">
+              <p><%= user_quest.comment  %></p>
+            </div>
+          </div>
+          <br>
+          <div class="history-user">
+            <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167316/Heroes%20app/Icons/pxArt_2_ihrfi7.png", class: "history-user-avatar"%>
+          </div>
+        <% end %>
 
       </div>
     <% end %>

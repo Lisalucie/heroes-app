@@ -9,3 +9,91 @@
 .quest-list {
   padding-bottom: 50px;
 }
+
+.quest-title p {
+  font-size: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.quest-content p {
+  font-size: 16px;
+  text-align: start;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+.quest-history {
+  display: flex;
+  justify-content: center;
+}
+
+.level {
+  font-size: 20px;
+}
+
+.history-comment {
+  // background-color: white;
+  background-image: url("buble.png");
+  background-position: center;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  // background-origin: content-box;
+  height: 100px;
+  // text-align: center;
+  position: relative;
+}
+
+.history-comment p {
+  position: absolute;
+  top: 10px;
+  bottom: 8px;
+  left: 35px;
+  // margin-left: 35px;
+  // margin-right: 35px;
+  // padding: 30px;
+}
+
+.history-user {
+  // width: 20px;
+  // height: 20px;
+.history-user-avatar {
+  width: 50px;
+  margin-left: 37px;
+}
+}
+
+.quest-history {
+    text-align: center;
+}
+
+
+
+.bubble {
+  margin: 5px 35px;
+  .bubble-text{
+    background:white;
+    color:black;
+    padding:7px 7px;
+    // border: 1px solid black;
+    border-radius:3px;
+    // width:350px;
+  }
+
+  .bubble-text::after{
+    content:"";
+    border-left:20px solid transparent;
+    border-right:20px solid transarent;
+    border-top: 20px solid white;
+    // border-bottom: 1px solid black;
+    position: absolute;
+  }
+}
