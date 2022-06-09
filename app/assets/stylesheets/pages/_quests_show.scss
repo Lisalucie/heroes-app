@@ -39,18 +39,17 @@
   h2 {
     font-family: $shiba-font;
     text-align: center;
+    font-size: 30px;
   }
 
-  h3{
-    font-family: $body-font;
-    font-weight: bold;
-    color: black;
-    font-size: 20px;
-    padding-bottom: 5px;
+  .tips-card {
+    color: $dark-blue;
+    font-size: 18px;
   }
+
   p {
     color: $dark-blue;
-    padding-bottom: 5px;
+    font-size: 20px;
   }
 
 }
