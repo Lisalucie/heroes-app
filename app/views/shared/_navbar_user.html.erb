@@ -4,7 +4,7 @@
       <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654167316/Heroes%20app/Icons/pxArt_2_ihrfi7.png", class: "behind-avatar"%>
     </div>
     <div class="user-infos-navbar d-flex">
-      <h2><%= current_user.nickname.capitalize  %></h2>
+      <h2><%= link_to "#{current_user.nickname.capitalize}", "/404" %></h2>
       <div class="level-infos">
         <p class="level">Level <%= current_user.level %></p>
         <div class="progress-bar-user">
