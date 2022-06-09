@@ -22,6 +22,12 @@ export default class extends Controller {
         };
         new Typed('.shiba-speech', questsString);
 
+        audio = new Audio('assets/shiba-talk.mp3');
+        this.audio.load();
+        audio.play()
+
+}
+
       } else if (this.hasTipsValue) {
         var questString = {
           strings: [this.tipsValue],
