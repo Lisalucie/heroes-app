@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-bottom: 5em;
   align-items: center;
+
 }
 
 
@@ -19,16 +20,39 @@
   justify-content: center;
 }
 
-h5, h1 {
-  font-family: $shiba-font;
-  text-align: center;
-}
+
 
 .card-quest {
   background-color: $light-blue;
   border: 15px solid $yellow;
   text-align: center;
   margin: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+  h1{
+    font-family: $headers-font;
+    font-size: 10px;
+  }
+
+  h2 {
+    font-family: $shiba-font;
+    text-align: center;
+  }
+
+  h3{
+    font-family: $body-font;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  p {
+    color: $dark-blue;
+    padding-bottom: 5px;
+  }
+
 }
 
 .space-button {
