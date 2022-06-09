@@ -19,9 +19,10 @@
     .guild-button + label {
       background-color: $light-blue;
       width: 100%;
-      padding: 2rem;
+      padding: 10px;
       border: 20px solid $dark-blue;
       cursor: pointer;
+      text-align: justify;
 
       img {
         width: 7rem;
