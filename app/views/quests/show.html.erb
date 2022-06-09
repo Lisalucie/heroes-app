@@ -23,17 +23,17 @@
       <div class="shiba">
         <%= image_tag "https://res.cloudinary.com/df6z4mw2e/image/upload/v1654178156/Heroes%20app/Icons/saphatthachat190600141-removebg-preview_we9qwu.png"%>
       </div>
-      <p><%= "Level #{@quest.level}"%></p>
-      <h1><%= "#{@quest.title}"%></h1>
-      <p><%= "#{@quest.content}"%></p>
+      <h1><%= "Level #{@quest.level}"%></h1>
+      <h2><%= "#{@quest.title}"%></h2>
+      <h3><%= "#{@quest.content}"%></h3>
       <p><%= "#{@quest.tips}"%></p>
       <div class="progress-bar-placement">
         <div class="progress">
-          <% if @user_quest.user_occurences.nil? %>
+          <% if @user_quest.user_occurences.nil? && @user_quest.user_occurences == @quest.occurences %>
             <div class="progress-bar" data-progress-bar-target="progressBar" data-next-value="100" style="width:0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             </div>
-          <% elsif @user_quest.user_occurences == @quest.occurences %>
-            <div class="progress-bar" data-progress-bar-target="progressBar"  data-next-value="100" style="width:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          <% elsif @user_quest.user_occurences.nil?%>
+            <div class="progress-bar" data-progress-bar-target="progressBar"  data-next-value="<%= 100 / @quest.occurences %>" style="width:0" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
             </div>
           <% else %>
             <div class="progress-bar" data-progress-bar-target="progressBar" data-next-value='<%= (100 * (@user_quest.user_occurences + 1)) / @quest.occurences %>' style="width:<%= (100 * @user_quest.user_occurences) / @quest.occurences %>%" role="progressbar" aria-valuenow="<%= (100 * @user_quest.user_occurences) / @quest.occurences %>" aria-valuemin="0" aria-valuemax="100">
