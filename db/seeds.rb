@@ -81,6 +81,20 @@ adventurer_level_3_quest_4 = Quest.create(level: 3, categorie: "Mental", title: 
 adventurer_level_3_quest_5 = Quest.create(level: 3, categorie: "Mental", title: "Wors case scenario: a dragon appears", content: "Stuck in your comfort zone? Make a list of your fears, and try to see waht could be the worst and the best that could happen if they became real.",
   tips: "It's hard, getting outside your comfort zone, but you get used to it. Slaying a dragon once ? Very hard. Slaying a dragon thrice ? Easy peasy.", occurences: 1, guild: adventurer)
 
+
+
+adventurer_level_4_quest_1 = Quest.create(level: 4, categorie: "Mental", title: "Be aware of your shortcomings", content: "It's okay to have flaws, no one is perfect. That's what makes us unique. List your flaws on a sheet of paper and choose three to improve on for seven days. The goal is not to be perfect, but to reduce them.",
+  tips: "We all have flaws, that's what makes us human, don't be afraid, think of the hero in you !", occurences: 7, guild: adventurer)
+adventurer_level_4_quest_2 = Quest.create(level: 4, categorie: "Mental", title: "the auto suggestion", content: "Every morning and evening for five days, repeat several times positive phrases that concern you, for example (I believe in myself and will succeed).",
+  tips: "Repeat to yourself the positive phrase of your choice while imagining yourself fully confident, doing things you would never have done before.", occurences: 5, guild: adventurer)
+adventurer_level_4_quest_3 = Quest.create(level: 4, categorie: "Social", title: "Go out to a bar", content: "Congratulations on reaching this stage. Now, go out on the town, to a bar or a nightclub with friends. At the party, ask someone to dance and engage in conversation if the volume allows.",
+  tips: "Ask a friend to help you approach the person if you wish. This is not a failure, you move faster with more than one person !!!", occurences: 1, guild: adventurer)
+adventurer_level_4_quest_4 = Quest.create(level: 4, categorie: "Physical", title: "Relax, be peaceful", content: "Take the time during two days to relax for 10 or 15 minutes, do a yoga session, meditation. This will allow you to breathe and to evacuate the negative thoughts that pull you down.",
+  tips: "Let yourself go, the goal here is to clear your mind to better move forward.", occurences: 2, guild: adventurer)
+adventurer_level_4_quest_5 = Quest.create(level: 4, categorie: "Social", title: "free hugs", content: "Get out of your comfort zone, stand in a busy place holding a sign in front of your chest FREE HUGS! You are the best, don't forget it.",
+  tips: "Giving back confidence to the people you meet will give you a lot of confidence.", occurences: 1, guild: adventurer)
+
+
 mage_level_1_quest_1 = Quest.create(level: 1, title:"Let it go, Let it goooooooo", content: "You'll never know and control everything, choose how you react !", tips: "A dragon appears. not good. Choose your option: you fight, you flee", occurences: 1, guild: mage)
 
 puts "Creating Guild choice"
