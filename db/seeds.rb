@@ -82,8 +82,11 @@ adventurer_level_3_quest_5 = Quest.create(level: 3, categorie: "Mental", title: 
 
 
 
-adventurer_level_4_quest_1 = Quest.create(level: 4, categorie: "Mental", title: "Be aware of your shortcomings", content: "It's okay to have flaws, no one is perfect. That's what makes us unique. List your flaws on a sheet of paper and choose three to improve on for seven days. The goal is not to be perfect, but to reduce them.",
-  tips: "We all have flaws, that's what makes us human, don't be afraid, think of the hero in you !", occurences: 7, guild: adventurer)
+adventurer_level_4_quest_1 = Quest.create(level: 4, categorie: "Social", title: "speak in public", content: "Dare to speak in front of a group of at least 20 people.",
+  tips: "You have worked on your breathing in a previous quest, apply this during your speech.
+  Remember all the quests you have done so far, they have prepared you for this one.
+  Before you begin your speech, tell yourself that you are a lion in front of a group of gazelles, you are Simba and you are the King.
+  Run to conquer your territory.", occurences: 1, guild: adventurer)
 adventurer_level_4_quest_2 = Quest.create(level: 4, categorie: "Mental", title: "the auto suggestion", content: "Every morning and evening for five days, repeat several times positive phrases that concern you, for example (I believe in myself and will succeed).",
   tips: "Repeat to yourself the positive phrase of your choice while imagining yourself fully confident, doing things you would never have done before.", occurences: 5, guild: adventurer)
 adventurer_level_4_quest_3 = Quest.create(level: 4, categorie: "Social", title: "Go out to a bar", content: "Congratulations on reaching this stage. Now, go out on the town, to a bar or a nightclub with friends. At the party, ask someone to dance and engage in conversation if the volume allows.",
