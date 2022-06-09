@@ -8,6 +8,12 @@ body {
 
 }
 
+.guild-name {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .homepage-container {
   justify-content: center;
   align-items: center;
@@ -62,7 +68,7 @@ body {
   background-color: $light-blue;
   margin-top: 50px;
   padding-top: 20px;
-  text-align:left;
+  text-align:center;
   .footer-text {
     padding-top: 40px;
     padding-bottom: 5rem;
