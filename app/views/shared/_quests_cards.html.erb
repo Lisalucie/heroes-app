@@ -1,5 +1,6 @@
 <div class="quest-container" >
   <div>
+  <h1>My quests</h1>
     <div class="col-12">
       <% @quests.each do |quest| %>
         <% if quest.user_quests.where(user: current_user).first&.validated? %>

@@ -42,7 +42,7 @@ puts "Creating quests..."
 # jean_image = URI.open("https://res.cloudinary.com/df6z4mw2e/image/upload/v1653407563/1200px-diplodocus_model_okdf4h.jpg")
 # jean_jean.photo.attach(io: jean_image, filename: 'nes.jpg', content_type: 'image/jpg')
 
-adventurer_level_1_quest_1 = Quest.create!(level: 1, categorie: "Mental", title: "5 qualities a day, insecurities away", content: "Choose 5 qualities that best define you",
+adventurer_level_1_quest_1 = Quest.create!(level: 1, categorie: "Mental", title: "5 qualities to keep insecurities away", content: "Choose 5 qualities that best define you",
   tips: "Think of someone you admire, what do you have in common ?
   It may be easier to begin with general qualities ('I am kind') before diving deeper !", occurences: 1, guild: adventurer)
 adventurer_level_1_quest_2 = Quest.create(level: 1, categorie: "Social", title: "Friends will guide you", content: "Let's keep going with your progress ! Now that you have defined 5 qualities by yourself, ask 3 friends what they think your qualities are",
@@ -64,21 +64,20 @@ adventurer_level_2_quest_3 = Quest.create(level: 2, categorie: "Physical", title
   tips: "If you're a beginner, walking 30 minutes also counts ! If you feel up to the challenge, you can check out Darebee for some epic workout inspiration", occurences: 2, guild: adventurer)
 adventurer_level_2_quest_4 = Quest.create(level: 2, categorie: "Mental", title: "I am a hero", content: "Today we're going to visualize our goals! Find somewhere quiet, get comfortable, close your eyes and picture in your mind the things that you want in your life.",
   tips: "Too hard ? Do a visualization board instead : print pictures of your dream life, and glue them on a big piece of paper. Put the final product somewhere where you can always see it", occurences: 1, guild: adventurer)
-adventurer_level_2_quest_5 = Quest.create(level: 2, categorie: "Mental", title: "Peaceful kingdom", content: "Take an inventory of your quests so far:your successes, your failures, your likes and dislikes. You're only at the beginning of your journey, it's normal to struggle. You can't expect to slay a dragon so early in the game...",
-  tips: "Accept limitations : you can't control everything. Didn't finish a challenge ? What can I change about myself or the situation to make it better ? If it's outside of your control, let it go.", occurences: 1, guild: adventurer)
+adventurer_level_2_quest_5 = Quest.create(level: 2, categorie: "Mental", title: "Peaceful kingdom", content: "In a journal, take an inventory of your quests so far : your successes, your failures, your likes and dislikes.",
+  tips: "Accept limitations : you can't control everything. If it's outside of your control, let it go. You're only at the beginning of your journey, it's normal to struggle. You can't expect to slay a dragon so early in the game...", occurences: 1, guild: adventurer)
 
 
 
 adventurer_level_3_quest_1 = Quest.create(level: 3, categorie: "Physical", title: "Somehow I'll make a hero out of you", content: "Meditating helps you sharpen your mind, and therefore your senses and your attention. It is an advantage in every battle ! Meditate at least 3 times this week.",
   tips: "If you're a beginner 10min of meditation will seem extremely hard, don't worry if you fail. Try to refocus every time you loose track !If you don't know where to begin type 'Guided meditation' on Youtube", occurences: 3, guild: adventurer)
-adventurer_level_3_quest_2 = Quest.create(level: 3, categorie: "Physical", title: "Daily quest, daily experience", content: "Leave early, park further away from work and take a walk.
-  Do you always open your phone right when you wake up? Use this time to read some page of an adventure book instead!",
+adventurer_level_3_quest_2 = Quest.create(level: 3, categorie: "Physical", title: "Daily quest, daily experience", content: "Change your routine ! Leave early, park further away from work and take a walk.",
   tips: "Remember : baby steps ! Your change can be as simple as tidying up your desk.", occurences: 5, guild: adventurer)
 adventurer_level_3_quest_3 = Quest.create(level: 3, categorie: "Social", title: "Be nice, with Brice", content: "Do one nice thing for someone today. To become a hero, you must help those in need !",
   tips: "Try volunteering, walking dogs at an animal shelter or cleaning up a beach. Helping other players is a must during your journey !", occurences: 1, guild: adventurer)
 adventurer_level_3_quest_4 = Quest.create(level: 3, categorie: "Mental", title: "Don't worry, be happy", content: "When you obsess about tomorrow, you’re too busy judging what hasn’t happened yet to experience what’s happening in the moment. Be more mindful of what's happening right now: concentrate on your breathing and look around you",
   tips: "Tomorrow is a mystery, yesterday is history, and today is a gift. That is why they call it the present. - A very wise turtle", occurences: 1, guild: adventurer)
-adventurer_level_3_quest_5 = Quest.create(level: 3, categorie: "Mental", title: "Wors case scenario: a dragon appears", content: "Stuck in your comfort zone? Make a list of your fears, and try to see waht could be the worst and the best that could happen if they became real.",
+adventurer_level_3_quest_5 = Quest.create(level: 3, categorie: "Mental", title: "Wors case scenario: a dragon appears", content: "Stuck in your comfort zone? Make a list of your fears, and try to see what could be the worst and the best that could happen if they became real.",
   tips: "It's hard, getting outside your comfort zone, but you get used to it. Slaying a dragon once ? Very hard. Slaying a dragon thrice ? Easy peasy.", occurences: 1, guild: adventurer)
 
 mage_level_1_quest_1 = Quest.create(level: 1, title:"Let it go, Let it goooooooo", content: "You'll never know and control everything, choose how you react !", tips: "A dragon appears. not good. Choose your option: you fight, you flee", occurences: 1, guild: mage)

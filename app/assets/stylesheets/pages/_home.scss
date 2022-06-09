@@ -11,8 +11,9 @@ body {
 .homepage-container {
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
   color: white;
+  text-align: center;
+
   h1 {
     font-family: $headers-font;
     font-size: 18px;
@@ -70,7 +71,7 @@ body {
 
 .img-shiba-homepage img {
   width: 20%;
-  right: -10%;
+  right: 20%;
   position: relative;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -83,6 +84,8 @@ body {
   border-radius: 35px;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
   width: 85%;
   display: block;
   margin: 0 auto;
@@ -99,6 +102,6 @@ body {
   border-right: 12px solid transparent;
   border-top: 12px solid $yellow;
   border-bottom: 20px solid transparent;
-  left: 100px;
+  right: 100px;
   bottom: -24px;
 }

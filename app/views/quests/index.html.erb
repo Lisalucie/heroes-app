@@ -1,5 +1,5 @@
 
-<div class="guild-choice-container p-4">
+<div class="guild-choice-container">
   <%= render 'shared/shiba' %>
   <% if current_user.guild_choices.present? %>
     <%= render 'shared/quests_cards' %>
@@ -9,9 +9,10 @@
 
       <div class="modal" id="modal">
         <div class="modal-body">
-          <h1>Congratulations !</h1>
+          <h1>Congrats !</h1>
           <h2>You have leveled up !</h2>
-          <h2>If you keep going, you'll slay dragon sooner than you think.</h2>
+          <h2>If you keep going, you'll slay dragon sooner than you think...</h2>
+          <%=  image_tag "dragon.png", alt:"Dragon icon" %>
         </div>
         <%= link_to "Continue my journey", quests_path, class: "modal-button" %>
       </div>
@@ -28,7 +29,9 @@
               <div classe="guild-choice">
                 <%= f.radio_button(:guild_id, guild.id, id: "guild_choice_#{guild.name}", class: "guild-button" ) %>
                 <%= f.label guild.name do %>
+                <div class="img-guild-choice">
                   <%= cl_image_tag guild.icon.key%>
+                </div>
                   <h1><%= guild.name %></h1>
                   <div class="guild-description">
                       <% if guild.name == "Adventurer" %>
