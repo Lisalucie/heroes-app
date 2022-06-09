@@ -1,0 +1,5 @@
+meta_product_name: "Heroes"
+meta_title: "Become a hero, one quest at a time"
+meta_description: "Heroes, is the app that will help you attain your goals while making it a game. We will be with you, each step of the way."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
