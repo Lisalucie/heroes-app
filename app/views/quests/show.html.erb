@@ -1,7 +1,6 @@
 <head>
-<% content_for :meta_title, "#{@quest.name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @quest.description %>
-<% content_for :meta_image, cl_image_path(@quest.photo.path) %>
+<% content_for :meta_title, @quest.title %>
+<% content_for :meta_description, @quest.content %>
 </head>
 
 <div class="all-quest-category-show d-flex">
