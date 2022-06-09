@@ -10,7 +10,7 @@ class UserQuestsController < ApplicationController
     # else
     #   @quests = Quest.all
     # end
-    
+
     @user_quests = UserQuest.where(user: current_user, status: "validated")
 
   end
@@ -46,7 +46,7 @@ class UserQuestsController < ApplicationController
   private
 
   def user_quest_params
-    params.require(:user_quest).permit(:status, :user_occurences, :quest_id, :user_id, :categorieicon_id)
+    params.require(:user_quest).permit(:status, :user_occurences, :quest_id, :user_id, :categorieicon_id, :comment)
   end
 
 

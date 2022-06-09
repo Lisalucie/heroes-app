@@ -28,7 +28,7 @@
             </div>
           </div>
         <% else %>
-          <%= link_to (quest_path(quest)), local: true do %>
+          <%= link_to (quest_path(quest)) do %>
             <%# CARD %>
             <div class="quest-card">
               <% count = current_user.user_quests.where(quest_id: quest.id).first ? current_user.user_quests.where(quest_id: quest.id).first.user_occurences : 0 %>

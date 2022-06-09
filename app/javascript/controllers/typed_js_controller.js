@@ -8,6 +8,7 @@ export default class extends Controller {
     tips: String
   }
 
+
   connect() {
     console.log(this.tipsValue)
       if (window.location.pathname == "/quests") {
