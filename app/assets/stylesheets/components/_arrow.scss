@@ -1,0 +1,41 @@
+.arrow {
+
+	top: 50%;
+	width: 3vmin;
+	height: 3vmin;
+	background: transparent;
+	border-top: 1vmin solid white;
+	border-right: 1vmin solid white;
+	box-shadow: 0 0 0 lightgray;
+	transition: all 200ms ease;
+
+
+	&.right {
+		right: 20px;
+		transform: translate3d(0,-50%,0) rotate(45deg);
+	}
+
+  &.left {
+		left: 19px;
+		transform: translate3d(0,-50%,0) rotate(-135deg);
+	}
+
+	&:hover {
+		border-color: orange;
+		box-shadow: 0.5vmin -0.5vmin 0 white;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%,-60%) rotate(45deg);
+		width: 200%;
+		height: 200%;
+	}
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  right: 420px;
+  left: auto;
+}
