@@ -3,6 +3,18 @@
 .history-title {
   color: white;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.history-title p {
+  margin-bottom: 0px;
+}
+
+.history-title h1 {
+  font-size: 15px;
+  padding-top: 20px;
 }
 
 
@@ -82,7 +94,7 @@
   .bubble-text{
     background:white;
     color:black;
-    padding:7px 7px;
+    padding:15px 15px;
     // border: 1px solid black;
     border-radius:3px;
     // width:350px;
