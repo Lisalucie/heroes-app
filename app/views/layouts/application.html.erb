@@ -4,6 +4,9 @@
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
@@ -26,9 +29,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <%# <%= favicon_link_tag %>
+
+     <%= render 'shared/ios_pwa_links' %>
 
 
 
