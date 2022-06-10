@@ -41,10 +41,8 @@ puts "Creating quests..."
 
 # jean_image = URI.open("https://res.cloudinary.com/df6z4mw2e/image/upload/v1653407563/1200px-diplodocus_model_okdf4h.jpg")
 # jean_jean.photo.attach(io: jean_image, filename: 'nes.jpg', content_type: 'image/jpg')
-
-adventurer_level_1_quest_1 = Quest.create!(level: 1, categorie: "Mental", title: "5 qualities to keep insecurities away", content: "Choose 5 qualities that best define you",
-  tips: "Think of someone you admire, what do you have in common ?
-  It may be easier to begin with general qualities ('I am kind') before diving deeper !", occurences: 1, guild: adventurer)
+adventurer_level_1_quest_1 = Quest.create(level: 1, categorie: "Physical", title: "Breathing exercices under the waterfall", content: "When you talk in a group, you might feel like cold water has been splashed to your face. Take a deep breathe, recenter yourself, release the knot in your stomach. Repeat each time you open your mouth",
+  tips: "It's alright to miss the timing of the conversation. Having the intention and preparing the action is already a big step. Each small step counts. Repeat this exercise during 4 days to master it !", occurences: 1, guild: adventurer)
 adventurer_level_1_quest_2 = Quest.create(level: 1, categorie: "Social", title: "Friends will guide you", content: "Let's keep going with your progress ! Now that you have defined 5 qualities by yourself, ask 3 friends what they think your qualities are",
   tips: "Asking other will reveal your 'blind spots', which are aspects of yourself that you don't realise ! Enjoy a coffee and share a positive moment with your friend.", occurences: 1, guild: adventurer)
 adventurer_level_1_quest_3 = Quest.create(level: 1, categorie: "Mental", title: "A Padawan needs a Jedi", content: "Who do you admire ? Who was your hero when you were younger? Choose at least 2 persons (fictional or real) that inspire you. What values do they have ? ",
@@ -55,11 +53,11 @@ adventurer_level_1_quest_5 = Quest.create(level: 1, categorie: "Mental", title: 
   tips: "You might think negatively but don't say it out loud, this the key in succeeding this challenge !
   Your objective : when facing a dragon think 'nice, finally someone strong!' and not 'oh no, he's too strong' ", occurences: 1, guild: adventurer)
 
-
-adventurer_level_2_quest_1 = Quest.create(level: 2, categorie: "Physical", title: "Breathing exercices under the waterfall", content: "When you talk in a group, you might feel like cold water has been splashed to your face. Take a deep breathe, recenter yourself, release the knot in your stomach. Repeat each time you open your mouth",
-  tips: "It's alright to miss the timing of the conversation. Having the intention and preparing the action is already a big step. Each small step counts. Repeat this exercise during 4 days to master it !", occurences: 4, guild: adventurer)
-adventurer_level_2_quest_2 = Quest.create(level: 2, categorie: "Physical", title: "Don't worry for I am here !", content: "After you wake up take a 'hero pose' during 2 minutes : hands on the hips, back straight, legs wide.",
-  tips: "Enjoy the confidence boost that this position gives you. The reason heroes are so confident is because they do it all the time !", occurences: 1, guild: adventurer)
+adventurer_level_2_quest_1 = Quest.create(level: 2, categorie: "Physical", title: "Don't worry for I am here !", content: "After you wake up take a 'hero pose' during 2 minutes : hands on the hips, back straight, legs wide.",
+  tips: "Enjoy the confidence boost that this position gives you. The reason heroes are so confident is because they do it all the time !", occurences: 4, guild: adventurer)
+adventurer_level_2_quest_2 = Quest.create!(level: 2, categorie: "Mental", title: "5 qualities to keep insecurities away", content: "Choose 5 qualities that best define you",
+  tips: "Think of someone you admire, what do you have in common ?
+  It may be easier to begin with general qualities ('I am kind') before diving deeper !", occurences: 1, guild: adventurer)
 adventurer_level_2_quest_3 = Quest.create(level: 2, categorie: "Physical", title: "Walking, running, flying", content: "Healthy mind, healthy body ! Both need to be worked together to become a hero. Exercise at least 2 times this week",
   tips: "If you're a beginner, walking 30 minutes also counts ! If you feel up to the challenge, you can check out Darebee for some epic workout inspiration", occurences: 2, guild: adventurer)
 adventurer_level_2_quest_4 = Quest.create(level: 2, categorie: "Mental", title: "I am a hero", content: "Today we're going to visualize our goals! Find somewhere quiet, get comfortable, close your eyes and picture in your mind the things that you want in your life.",
